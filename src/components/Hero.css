@@ -1,0 +1,167 @@
+.hero {
+  padding-top: clamp(7rem, 16vh, 11rem);
+  padding-bottom: 0;
+  position: relative;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 320px);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+
+.hero__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  border: 1px solid var(--line);
+  padding: 0.4rem 0.8rem;
+  border-radius: 100px;
+  margin-bottom: 1.6rem;
+}
+.hero__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 0 var(--accent-glow);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 69, 58, 0.5); }
+  70% { box-shadow: 0 0 0 7px rgba(255, 69, 58, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 69, 58, 0); }
+}
+
+.hero__role { margin-bottom: 1.4rem; }
+
+.hero__title {
+  font-size: clamp(2.7rem, 8vw, 5.6rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+.hero__line { display: block; }
+.hero__line--accent {
+  color: var(--accent);
+  position: relative;
+  width: fit-content;
+}
+.hero__line--accent::after {
+  content: '_';
+  color: var(--accent);
+  animation: blink 1.1s steps(1) infinite;
+}
+
+.hero__lede {
+  margin-top: 1.8rem;
+  max-width: 46ch;
+  font-size: clamp(1rem, 1.6vw, 1.18rem);
+  color: var(--text-dim);
+  line-height: 1.65;
+}
+
+.hero__cta {
+  margin-top: 2.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+/* spec panel */
+.hero__spec {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: linear-gradient(180deg, var(--bg-elev), var(--bg-card));
+  overflow: hidden;
+  box-shadow: 0 30px 80px -40px rgba(0, 0, 0, 0.8);
+}
+.spec__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem 0.95rem;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.02);
+}
+.spec__dotrow { display: inline-flex; gap: 5px; }
+.spec__dotrow i {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: #2a2a2e;
+}
+.spec__dotrow i:first-child { background: #3a3a3e; }
+.spec__path {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-faint);
+}
+.spec__body { padding: 0.5rem 0.95rem 0.85rem; }
+.spec__body > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px dashed var(--line);
+}
+.spec__body > div:last-child { border-bottom: none; }
+.spec__body dt {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+}
+.spec__body dd {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text);
+  text-align: right;
+}
+.spec__loc { display: inline-flex; align-items: center; gap: 0.3rem; color: var(--text-dim) !important; }
+.spec__ok { display: inline-flex; align-items: center; gap: 0.45rem; color: var(--accent) !important; }
+
+/* stats strip */
+.hero__stats {
+  margin-top: clamp(3.5rem, 8vw, 6rem);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.hstat {
+  padding: 1.6rem 1.4rem;
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.hstat:last-child { border-right: none; }
+.hstat__idx {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--accent);
+}
+.hstat__value {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+.hstat__label {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+}
+
+@media (max-width: 900px) {
+  .hero__grid { grid-template-columns: 1fr; }
+  .hero__spec { display: none; }
+}
+@media (max-width: 680px) {
+  .hero__stats { grid-template-columns: repeat(2, 1fr); }
+  .hstat:nth-child(2) { border-right: none; }
+  .hstat:nth-child(1), .hstat:nth-child(2) { border-bottom: 1px solid var(--line); }
+}
