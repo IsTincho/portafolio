@@ -109,10 +109,12 @@ function ProjectCard({ p, onOpenCase }) {
               <BookOpen size={15} strokeWidth={2.2} /> {t('projects.caseStudy')}
             </button>
           )}
-          {p.url && (
+          {p.url ? (
             <a className="pcard__link" href={p.url} target="_blank" rel="noopener noreferrer">
               {t('projects.visit')} <ArrowUpRight size={16} strokeWidth={2.2} />
             </a>
+          ) : (
+            p.domain && <span className="pcard__domain mono">{p.domain}</span>
           )}
         </div>
       </div>

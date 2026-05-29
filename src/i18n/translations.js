@@ -68,7 +68,7 @@ export const strings = {
     projects: {
       kicker: '// proyectos',
       title: 'Trabajo seleccionado.',
-      sub: 'Tres sistemas full-stack en producción o listos para producción.',
+      sub: 'Cuatro proyectos en producción o listos para producción.',
       role: 'Rol',
       stack: 'Stack',
       year: 'Año',
@@ -172,7 +172,7 @@ export const strings = {
     projects: {
       kicker: '// work',
       title: 'Selected work.',
-      sub: 'Three full-stack systems in production or production-ready.',
+      sub: 'Four projects in production or production-ready.',
       role: 'Role',
       stack: 'Stack',
       year: 'Year',

@@ -229,4 +229,67 @@ export const projects = [
       },
     },
   },
+  {
+    id: 'vectorga-quiz',
+    name: 'Vectorga Quiz',
+    index: '04',
+    year: '2026',
+    url: null,
+    domain: 'standalone · .zip',
+    tagline: {
+      es: 'Quiz web para fans de Los Vectorgas: adiviná el video por audio o miniatura. Vanilla JS, sin frameworks, sin build tools, sin dependencias.',
+      en: 'A web quiz for Los Vectorgas fans: guess the video by audio or thumbnail. Vanilla JS, no frameworks, no build tools, no dependencies.',
+    },
+    role: {
+      es: 'Diseño, desarrollo y distribución',
+      en: 'Design, development & distribution',
+    },
+    status: {
+      es: 'MVP funcional · listo para distribuir',
+      en: 'Working MVP · ready to ship',
+    },
+    stack: ['Vanilla JS', 'HTML', 'CSS', 'YouTube Data API v3', 'YouTube IFrame API', 'Web Audio API', 'PowerShell'],
+    metrics: [
+      { value: '0', label: { es: 'dependencias', en: 'dependencies' } },
+      { value: '1', label: { es: 'archivo HTML', en: 'HTML file' } },
+      { value: '2', label: { es: 'modos de juego', en: 'game modes' } },
+      { value: '12h', label: { es: 'auto-refresh', en: 'auto-refresh' } },
+    ],
+    highlights: {
+      es: [
+        'Producto para mi propio grupo de creadores (Los Vectorgas, fans de @Vector y @VectorMVP): conozco a la audiencia desde adentro.',
+        'Audio y efectos sintetizados con Web Audio API: cero archivos de sonido, peso 0 KB en assets.',
+        'Hybrid loading: lista de videos incrustada + refresh contra YouTube API en background cada 12h. Nunca pantalla vacía.',
+        'Distribución standalone: 1 HTML + serve.ps1 + JUGAR.cmd. Doble click y juega, sin instalar nada.',
+      ],
+      en: [
+        'A product for my own creator collective (Los Vectorgas, fans of @Vector and @VectorMVP): I know the audience from the inside.',
+        'Audio and effects synthesized with the Web Audio API: zero sound files, 0 KB in assets.',
+        'Hybrid loading: embedded video list + background YouTube API refresh every 12h. Never an empty screen.',
+        'Standalone distribution: 1 HTML + serve.ps1 + JUGAR.cmd. Double-click and play, no install.',
+      ],
+    },
+    caseStudy: {
+      es: {
+        overview: 'Quiz web para fans de los canales Vector y VectorMVP. Adiviná de qué video se trata por audio o miniatura censurada, ganás puntos. Vanilla JS, distribución standalone.',
+        sections: [
+          { title: 'El desafío', body: 'Distribuir un juego para mi comunidad sin que el usuario instale nada, sin frameworks, y que se mantenga al día solo cuando subimos videos nuevos.' },
+          { title: 'La solución', body: '1 HTML autocontenido con todo el código y la lista de videos incrustada. Un mini-server local en PowerShell (JUGAR.cmd → serve.ps1) abre el navegador en localhost para que YouTube no bloquee el audio embebido.' },
+          { title: 'Audio sin archivos', body: 'Todos los efectos del juego se generan en vivo con Web Audio API: acierto, error, victoria, reveal. Cero KB de assets de sonido, funciona offline después de la primera carga.' },
+          { title: 'Catálogo que se actualiza solo', body: 'Esquema híbrido: pinta al instante con la lista incrustada y en segundo plano consulta la YouTube Data API guardando en localStorage. Refresh máximo cada 12h para no quemar la cuota.' },
+          { title: 'Hacia dónde va', body: 'Próximo paso: integrarlo al ecosistema de KingsLV como sistema de gamificación — los puntos del quiz se canjean por descuentos en la tienda. Cierra producto, comunidad y e-commerce en un solo loop.' },
+        ],
+      },
+      en: {
+        overview: 'A web quiz for fans of the Vector and VectorMVP YouTube channels. Guess the video by audio or censored thumbnail and earn points. Vanilla JS, standalone distribution.',
+        sections: [
+          { title: 'The challenge', body: 'Ship a game to my community without anyone installing anything, with no frameworks, and have it stay up to date on its own as new videos go live.' },
+          { title: 'The solution', body: 'A single self-contained HTML with all code and the video list embedded. A small local PowerShell server (JUGAR.cmd → serve.ps1) opens the browser at localhost so YouTube does not block embedded audio.' },
+          { title: 'Audio without files', body: 'All game effects are synthesized live with the Web Audio API: hit, miss, victory, reveal. Zero KB of sound assets, works offline after the first load.' },
+          { title: 'A self-updating catalog', body: 'Hybrid scheme: instant paint from the embedded list, plus a background YouTube Data API call cached in localStorage. Refresh at most every 12h to spare quota.' },
+          { title: 'Where it is headed', body: 'Next step: plug it into the KingsLV ecosystem as a gamification system — quiz points redeemable for store discounts. Closes the loop between product, community and e-commerce.' },
+        ],
+      },
+    },
+  },
 ]
