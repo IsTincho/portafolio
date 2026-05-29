@@ -7,6 +7,7 @@ import './Nav.css'
 const links = [
   { id: 'about', key: 'nav.about' },
   { id: 'skills', key: 'nav.skills' },
+  { id: 'ai', key: 'nav.ai' },
   { id: 'projects', key: 'nav.projects' },
   { id: 'experience', key: 'nav.experience' },
   { id: 'contact', key: 'nav.contact' },

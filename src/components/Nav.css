@@ -167,7 +167,7 @@
   border-radius: 10px;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1080px) {
   .nav__links { display: none; }
   .nav__cv span { display: none; }
   .nav__cv { padding: 0.5rem; }
