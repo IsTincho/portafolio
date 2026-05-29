@@ -8,7 +8,7 @@ import Reveal from './Reveal.jsx'
 import './Projects.css'
 
 const shotUrl = (url) =>
-  `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&meta=false&embed=screenshot.url`
+  `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&meta=false&waitUntil=networkidle2&waitForTimeout=4000&embed=screenshot.url`
 
 function ProjectPreview({ p }) {
   const { t } = useLang()
