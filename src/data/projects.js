@@ -152,6 +152,7 @@ export const projects = [
           { title: 'Pagos seguros', body: 'Mercado Pago con Wallet Brick embebido + webhook verificado por HMAC-SHA256 en tiempo constante, validación de stock contra la base antes de cobrar y cooldown anti-spam de preferencias.' },
           { title: 'Performance', body: 'Imágenes en Cloudinary con transformaciones por URL: de 2–5 MB a 30–100 KB (~95% menos). Índices Mongo, eliminación de N+1 y code splitting del bundle de admin.' },
           { title: 'Resultado', body: 'En producción, procesando pagos reales y gestionando stock por variante y talle. Back-office Apple-style de diseño propio con 10 secciones.' },
+          { title: 'Próximo módulo: gamificación', body: 'Estamos integrando Vectorga Quiz como sistema de puntos: los fans juegan el quiz, ganan puntos y los canjean por descuentos en la tienda. Un loop de engagement entre creadores, comunidad y e-commerce.' },
         ],
       },
       en: {
@@ -162,6 +163,7 @@ export const projects = [
           { title: 'Secure payments', body: 'Mercado Pago with an embedded Wallet Brick + a constant-time HMAC-SHA256 verified webhook, server-side stock validation before charging, and an anti-spam preference cooldown.' },
           { title: 'Performance', body: 'Cloudinary images with URL transforms: from 2–5 MB down to 30–100 KB (~95% lighter). Mongo indexes, N+1 removal and code-splitting of the admin bundle.' },
           { title: 'Outcome', body: 'In production, processing real payments and managing stock per variant and size. A custom Apple-style back-office with 10 sections.' },
+          { title: 'Next module: gamification', body: 'We are integrating Vectorga Quiz as a points system: fans play the quiz, earn points and redeem them for store discounts. An engagement loop between creators, community and e-commerce.' },
         ],
       },
     },
@@ -277,7 +279,7 @@ export const projects = [
           { title: 'La solución', body: '1 HTML autocontenido con todo el código y la lista de videos incrustada. Un mini-server local en PowerShell (JUGAR.cmd → serve.ps1) abre el navegador en localhost para que YouTube no bloquee el audio embebido.' },
           { title: 'Audio sin archivos', body: 'Todos los efectos del juego se generan en vivo con Web Audio API: acierto, error, victoria, reveal. Cero KB de assets de sonido, funciona offline después de la primera carga.' },
           { title: 'Catálogo que se actualiza solo', body: 'Esquema híbrido: pinta al instante con la lista incrustada y en segundo plano consulta la YouTube Data API guardando en localStorage. Refresh máximo cada 12h para no quemar la cuota.' },
-          { title: 'Hacia dónde va', body: 'Próximo paso: integrarlo al ecosistema de KingsLV como sistema de gamificación — los puntos del quiz se canjean por descuentos en la tienda. Cierra producto, comunidad y e-commerce en un solo loop.' },
+          { title: 'Hacia dónde va', body: 'Lo vamos a integrar a KingsLV como sistema de gamificación: los puntos del quiz se van a canjear por descuentos en la tienda. Cierra producto, comunidad y e-commerce en un solo loop.' },
         ],
       },
       en: {
@@ -287,7 +289,7 @@ export const projects = [
           { title: 'The solution', body: 'A single self-contained HTML with all code and the video list embedded. A small local PowerShell server (JUGAR.cmd → serve.ps1) opens the browser at localhost so YouTube does not block embedded audio.' },
           { title: 'Audio without files', body: 'All game effects are synthesized live with the Web Audio API: hit, miss, victory, reveal. Zero KB of sound assets, works offline after the first load.' },
           { title: 'A self-updating catalog', body: 'Hybrid scheme: instant paint from the embedded list, plus a background YouTube Data API call cached in localStorage. Refresh at most every 12h to spare quota.' },
-          { title: 'Where it is headed', body: 'Next step: plug it into the KingsLV ecosystem as a gamification system — quiz points redeemable for store discounts. Closes the loop between product, community and e-commerce.' },
+          { title: 'Where it is headed', body: 'We are going to plug it into KingsLV as a gamification system: quiz points will be redeemable for store discounts. Closes the loop between product, community and e-commerce.' },
         ],
       },
     },
