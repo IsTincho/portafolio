@@ -91,8 +91,8 @@ export const projects = [
     name: 'Club Fans Remeras',
     index: '03',
     year: '2025',
-    url: null,
-    domain: 'github.com/IsTincho',
+    url: 'https://cfr-repo.pages.dev/',
+    domain: 'cfr-repo.pages.dev',
     tagline: {
       es: 'E-commerce de cultura pop con identidad cyberpunk, monorepo y esquemas Zod compartidos cliente/servidor.',
       en: 'Pop-culture e-commerce with a cyberpunk identity, monorepo, and shared client/server Zod schemas.',

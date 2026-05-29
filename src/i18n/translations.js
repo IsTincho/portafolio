@@ -51,6 +51,8 @@ export const strings = {
       highlights: 'Destacados',
       visit: 'Visitar sitio',
       status: 'Estado',
+      loadingPreview: 'cargando preview…',
+      previewUnavailable: 'preview no disponible',
     },
     experience: {
       kicker: '// experiencia',
@@ -125,6 +127,8 @@ export const strings = {
       highlights: 'Highlights',
       visit: 'Visit site',
       status: 'Status',
+      loadingPreview: 'loading preview…',
+      previewUnavailable: 'preview unavailable',
     },
     experience: {
       kicker: '// experience',

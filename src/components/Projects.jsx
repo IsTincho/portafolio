@@ -1,10 +1,48 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowUpRight, Check } from 'lucide-react'
+import { ArrowUpRight, Check, Lock } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
 import { projects } from '../data/projects.js'
 import Counter from './Counter.jsx'
 import Reveal from './Reveal.jsx'
 import './Projects.css'
+
+const shotUrl = (url) =>
+  `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&meta=false&embed=screenshot.url`
+
+function ProjectPreview({ p }) {
+  const { t } = useLang()
+  const [status, setStatus] = useState('loading') // loading | ok | error
+
+  return (
+    <a
+      className={`pcard__preview is-${status}`}
+      href={p.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`${t('projects.visit')}: ${p.name}`}
+    >
+      <span className="pcard__chrome">
+        <span className="pcard__chrome-dots"><i /><i /><i /></span>
+        <span className="pcard__chrome-url"><Lock size={11} /> {p.domain}</span>
+        <ArrowUpRight size={15} className="pcard__chrome-go" />
+      </span>
+      <span className="pcard__shot">
+        <span className="pcard__shot-ph mono">
+          {status === 'error' ? t('projects.previewUnavailable') : t('projects.loadingPreview')}
+        </span>
+        <img
+          src={shotUrl(p.url)}
+          alt={`${p.name} — preview`}
+          loading="lazy"
+          decoding="async"
+          onLoad={() => setStatus('ok')}
+          onError={() => setStatus('error')}
+        />
+      </span>
+    </a>
+  )
+}
 
 function ProjectCard({ p }) {
   const { t, lang } = useLang()
@@ -24,6 +62,8 @@ function ProjectCard({ p }) {
         {p.flagship && <span className="pcard__flag">flagship</span>}
         <span className="pcard__year mono">{p.year}</span>
       </div>
+
+      {p.url && <ProjectPreview p={p} />}
 
       <div className="pcard__head">
         <p className="pcard__tagline">{p.tagline[lang]}</p>
