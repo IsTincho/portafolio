@@ -53,6 +53,10 @@ export const strings = {
       status: 'Estado',
       loadingPreview: 'cargando preview…',
       previewUnavailable: 'preview no disponible',
+      moreTitle: 'Más proyectos',
+      moreSub: 'Trabajos previos y de formación.',
+      caseStudy: 'Ver caso',
+      close: 'Cerrar',
     },
     experience: {
       kicker: '// experiencia',
@@ -129,6 +133,10 @@ export const strings = {
       status: 'Status',
       loadingPreview: 'loading preview…',
       previewUnavailable: 'preview unavailable',
+      moreTitle: 'More projects',
+      moreSub: 'Earlier and academic work.',
+      caseStudy: 'View case',
+      close: 'Close',
     },
     experience: {
       kicker: '// experience',

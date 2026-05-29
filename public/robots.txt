@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tincho.pages.dev/sitemap.xml
