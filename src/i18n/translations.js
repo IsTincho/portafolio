@@ -18,7 +18,7 @@ export const strings = {
       lede: 'Co-fundador técnico de ZAIGEST. Diseño y desarrollo end-to-end: SaaS multi-tenant, pasarelas de pago, IA aplicada y arquitecturas seguras.',
       ctaProjects: 'Ver proyectos',
       ctaContact: 'Contactar',
-      loc: 'Rosario, Argentina',
+      loc: 'Argentina',
     },
     stats: {
       production: 'sistemas en producción',
@@ -122,7 +122,7 @@ export const strings = {
       lede: 'Technical co-founder of ZAIGEST. End-to-end design and development: multi-tenant SaaS, payment gateways, applied AI, and secure architectures.',
       ctaProjects: 'View work',
       ctaContact: 'Get in touch',
-      loc: 'Rosario, Argentina',
+      loc: 'Argentina',
     },
     stats: {
       production: 'systems in production',

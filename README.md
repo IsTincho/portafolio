@@ -1,4 +1,4 @@
-# Portafolio — Martín Segnini
+# Portafolio — IsTincho
 
 Mi portafolio personal como desarrollador full stack. Single page, bilingüe (ES/EN), tema oscuro con acento rojo. Lo armé para mostrar los proyectos en los que vengo trabajando (ZAIGEST, KingsLV, CFR) junto con mi experiencia y mi stack.
 

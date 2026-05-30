@@ -62,7 +62,7 @@ export default function Nav() {
     <header className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <div className="nav__inner container">
         <button className="nav__brand" onClick={() => go('top')} aria-label="Inicio">
-          <span className="nav__mono">M.SEGNINI</span>
+          <span className="nav__mono">ISTINCHO</span>
           <span className="nav__cursor" />
         </button>
 

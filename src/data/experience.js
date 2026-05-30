@@ -4,7 +4,7 @@ export const experience = [
     period: { es: '2026 — Presente', en: '2026 — Present' },
     role: { es: 'Co-fundador Técnico / Full-Stack', en: 'Technical Co-founder / Full-Stack' },
     org: 'ZAIGEST',
-    place: { es: 'Rosario · Remoto', en: 'Rosario · Remote' },
+    place: { es: 'Argentina · Remoto', en: 'Argentina · Remote' },
     current: true,
     points: {
       es: [
@@ -24,7 +24,7 @@ export const experience = [
     period: { es: '2024 — Presente', en: '2024 — Present' },
     role: { es: 'Desarrollador Full-Stack Freelance', en: 'Freelance Full-Stack Developer' },
     org: { es: 'Clientes particulares', en: 'Private clients' },
-    place: { es: 'Rosario', en: 'Rosario' },
+    place: { es: 'Argentina', en: 'Argentina' },
     points: {
       es: [
         'Desarrollo y mantenimiento de aplicaciones web a medida con React en frontend y Node.js en backend.',
@@ -41,7 +41,7 @@ export const experience = [
     period: { es: '2020 — 2021', en: '2020 — 2021' },
     role: { es: 'Técnico en Informática', en: 'IT Technician' },
     org: { es: 'Clientes particulares', en: 'Private clients' },
-    place: { es: 'Rosario', en: 'Rosario' },
+    place: { es: 'Argentina', en: 'Argentina' },
     points: {
       es: [
         'Ensamblado y configuración de equipos, mantenimiento preventivo y correctivo, eliminación de malware.',
@@ -58,7 +58,7 @@ export const education = [
     id: 'utn',
     period: '2022 — 2024',
     title: { es: 'Técnico Universitario en Programación', en: 'University Programming Technician' },
-    org: 'UTN FRRO · Rosario',
+    org: 'UTN FRRO · Argentina',
   },
   {
     id: 'yoprogramo',
@@ -70,6 +70,6 @@ export const education = [
     id: 'ettp',
     period: '2016 — 2021',
     title: { es: 'Técnico en Informática Profesional y Personal', en: 'Professional & Personal IT Technician' },
-    org: 'ETTP N°394 · Rosario',
+    org: 'ETTP N°394 · Argentina',
   },
 ]

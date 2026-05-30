@@ -63,7 +63,7 @@ export default function Hero() {
         >
           <div className="spec__bar">
             <span className="spec__dotrow"><i /><i /><i /></span>
-            <span className="spec__path">~/martin-segnini</span>
+            <span className="spec__path">~/istincho</span>
           </div>
           <dl className="spec__body">
             <div><dt>ROLE</dt><dd>Full-Stack Dev</dd></div>
