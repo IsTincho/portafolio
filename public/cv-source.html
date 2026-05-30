@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+    <title>CV — Martín Iván Segnini · IsTincho</title>
+    <style>
+      :root {
+        --accent: #d83a32;
+        --ink: #15161a;
+        --text: #2a2c33;
+        --dim: #5c5e66;
+        --line: #e3e3e6;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { background: #fff; color: var(--text); font-family: 'Hanken Grotesk', sans-serif; }
+      @page { size: A4; margin: 0; }
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        padding: 14mm 16mm;
+        background: #fff;
+        position: relative;
+        font-size: 10.2pt;
+        line-height: 1.42;
+      }
+      .page + .page { page-break-before: always; }
+
+      /* header */
+      .head { padding-bottom: 8mm; border-bottom: 2px solid var(--ink); margin-bottom: 6mm; }
+      .head__name {
+        font-size: 22pt;
+        font-weight: 700;
+        letter-spacing: -0.015em;
+        color: var(--ink);
+        line-height: 1.05;
+      }
+      .head__handle {
+        display: inline-block;
+        margin-left: 0.5rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11pt;
+        color: var(--accent);
+        font-weight: 600;
+        vertical-align: 4px;
+      }
+      .head__role {
+        margin-top: 3mm;
+        font-size: 11.5pt;
+        color: var(--ink);
+        font-weight: 500;
+      }
+      .head__contact {
+        margin-top: 4mm;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9pt;
+        color: var(--dim);
+      }
+      .head__contact span + span::before { content: ' · '; color: var(--line); }
+
+      /* sections */
+      section { margin-bottom: 6mm; }
+      section:last-child { margin-bottom: 0; }
+      h2 {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--accent);
+        margin-bottom: 3mm;
+        padding-bottom: 1.5mm;
+        border-bottom: 1px solid var(--line);
+      }
+
+      p.perfil { color: var(--text); }
+
+      /* skills */
+      .skills dl {
+        display: grid;
+        grid-template-columns: 32mm 1fr;
+        column-gap: 4mm;
+        row-gap: 1.5mm;
+      }
+      .skills dt {
+        font-weight: 600;
+        color: var(--ink);
+        font-size: 9.5pt;
+      }
+      .skills dd { color: var(--text); font-size: 9.8pt; }
+
+      /* experience / projects items */
+      .item { margin-bottom: 4mm; }
+      .item:last-child { margin-bottom: 0; }
+      .item__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 4mm;
+        margin-bottom: 1mm;
+      }
+      .item__title { font-weight: 600; color: var(--ink); font-size: 10.5pt; }
+      .item__title em { font-style: normal; color: var(--accent); font-weight: 600; }
+      .item__meta {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 8.5pt;
+        color: var(--dim);
+        white-space: nowrap;
+      }
+      .item__place {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 8.5pt;
+        color: var(--dim);
+        margin-bottom: 1.5mm;
+      }
+      ul.bullets { list-style: none; padding-left: 0; }
+      ul.bullets li {
+        position: relative;
+        padding-left: 3.5mm;
+        margin-bottom: 0.8mm;
+      }
+      ul.bullets li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 7.5pt;
+        width: 1.5mm;
+        height: 1.5mm;
+        background: var(--accent);
+        border-radius: 50%;
+      }
+
+      /* education compact */
+      .edu li, .langs li, .other li {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 4mm;
+        padding: 1.5mm 0;
+        border-bottom: 1px dashed var(--line);
+      }
+      .edu li:last-child, .langs li:last-child, .other li:last-child { border-bottom: none; }
+      .edu li > div:first-child, .langs li > div:first-child, .other li > div:first-child {
+        font-size: 10pt;
+      }
+      .edu li > div:first-child strong, .langs li > div:first-child strong {
+        font-weight: 600; color: var(--ink);
+      }
+      .edu li > div:last-child, .langs li > div:last-child, .other li > div:last-child {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 8.5pt;
+        color: var(--dim);
+        white-space: nowrap;
+      }
+      ul.edu, ul.langs, ul.other { list-style: none; padding-left: 0; }
+
+      .footer-note {
+        position: absolute;
+        bottom: 6mm;
+        left: 16mm;
+        right: 16mm;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 7.5pt;
+        color: #b0b0b6;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- PAGE 1 -->
+    <div class="page">
+      <header class="head">
+        <div class="head__name">Martín Iván Segnini<span class="head__handle">@IsTincho</span></div>
+        <div class="head__role">Desarrollador Full Stack · Co-fundador técnico ZAIGEST</div>
+        <div class="head__contact">
+          <span>Argentina</span>
+          <span>tinchosegnini@gmail.com</span>
+          <span>linkedin.com/in/martin-segnini</span>
+          <span>github.com/IsTincho</span>
+        </div>
+      </header>
+
+      <section>
+        <h2>Perfil profesional</h2>
+        <p class="perfil">Desarrollador Full Stack enfocado en el ecosistema JavaScript moderno (React 18, Node.js, Express, MongoDB) y Técnico Universitario en Programación (UTN FRRO). Co-fundador técnico de <strong>ZAIGEST</strong>, SaaS multi-tenant inmobiliario con IA en producción. Lidero el diseño y desarrollo end-to-end: arquitectura backend, modelado de datos, frontend e integraciones externas (MercadoPago, AFIP SOAP, WhatsApp Cloud API, Cloudinary, Groq LLM). Perfil orientado a producto: priorizo features funcionales, seguras y mantenibles en producción.</p>
+      </section>
+
+      <section class="skills">
+        <h2>Habilidades técnicas</h2>
+        <dl>
+          <dt>Lenguajes</dt><dd>JavaScript (ESM), TypeScript, C#, HTML5, CSS3, SQL</dd>
+          <dt>Frontend</dt><dd>React 18, Vite, React Query, Redux / RTK, Framer Motion, Tailwind, PWA, diseño responsive</dd>
+          <dt>Backend</dt><dd>Node.js, Express, REST APIs, JWT, bcrypt, middleware (auth · multi-tenancy · rate limit), cron jobs</dd>
+          <dt>Bases de datos</dt><dd>MongoDB (Mongoose, índices compuestos, agregaciones, multi-tenant), MySQL, Entity Framework</dd>
+          <dt>Integraciones</dt><dd>MercadoPago, AFIP (SOAP / WSAA), WhatsApp Cloud API, Groq LLM, Cloudinary, Twilio, webhooks HMAC</dd>
+          <dt>DevOps / Deploy</dt><dd>Cloudflare Pages, Railway, MongoDB Atlas, GitHub Actions, Firebase, dominios y DNS</dd>
+          <dt>IA &amp; Agentes</dt><dd>Claude Code, MCP (Model Context Protocol), LLMs, RAG, prompt design, desarrollo agéntico</dd>
+          <dt>Herramientas</dt><dd>Git, GitHub, VS Code, Postman, MongoDB Compass</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Experiencia laboral</h2>
+
+        <div class="item">
+          <div class="item__head">
+            <div class="item__title">Co-fundador Técnico / Desarrollador Full Stack <em>— ZAIGEST</em></div>
+            <div class="item__meta">2026 — Presente</div>
+          </div>
+          <div class="item__place">Argentina · Remoto</div>
+          <ul class="bullets">
+            <li>Diseño y desarrollo end-to-end de ZAIGEST, SaaS multi-tenant inmobiliario con IA, en producción con cliente real.</li>
+            <li>Stack: Node.js + Express + MongoDB Atlas en backend, React 18 + Vite en frontend. Deploy en Railway y Cloudflare Pages.</li>
+            <li>Arquitectura multi-tenant con aislamiento por <code>empresaId</code>, auth JWT, middlewares de tenant, plan guard y rate limit.</li>
+            <li>Modelé +15 entidades MongoDB y desarrollé +80 componentes React. 9 cron jobs y 48 routers REST en producción.</li>
+            <li>Integré Groq LLM para 8 capacidades de IA: OCR de documentos, scoring de morosos, generación de contratos, predictor de precios, tasación y descripciones SEO.</li>
+            <li>Implementé facturación electrónica AFIP (SOAP + WSAA, certificados encriptados AES-GCM), MercadoPago con webhook HMAC, y WhatsApp Cloud API multi-tenant.</li>
+            <li>Hardening de seguridad: <code>escapeRegex</code> en todas las queries, body limits por path, <code>express-mongo-sanitize</code>, validación de inputs y manejo de secrets.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item__head">
+            <div class="item__title">Desarrollador Full Stack Freelance <em>— Clientes Particulares</em></div>
+            <div class="item__meta">2024 — Presente</div>
+          </div>
+          <div class="item__place">Argentina</div>
+          <ul class="bullets">
+            <li>Desarrollo y mantenimiento de aplicaciones web con React y Node.js, incluyendo la plataforma <strong>KingsLV</strong> (e-commerce multi-tienda en producción con pagos reales).</li>
+            <li>Relevamiento de requisitos con clientes, optimización de bases MySQL y diseño de interfaces a medida.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item__head">
+            <div class="item__title">Técnico en Informática <em>— Clientes Particulares</em></div>
+            <div class="item__meta">2020 — 2021</div>
+          </div>
+          <div class="item__place">Argentina</div>
+          <ul class="bullets">
+            <li>Ensamblado, configuración y mantenimiento preventivo y correctivo de equipos. Instalación y configuración de software.</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="footer-note"><span>Martín Iván Segnini · @IsTincho</span><span>página 1 / 2</span></div>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="page">
+      <section>
+        <h2>Proyectos destacados</h2>
+
+        <div class="item">
+          <div class="item__head">
+            <div class="item__title">ZAIGEST <em>— SaaS inmobiliario con IA</em></div>
+            <div class="item__meta">2026 — Presente</div>
+          </div>
+          <ul class="bullets">
+            <li>CRM inmobiliario completo en producción: contratos, recibos, liquidaciones unificadas, leads (Kanban), propiedades, ventas, finanzas, portales de inquilino y propietario.</li>
+            <li>8 módulos IA sobre Groq LLM: copiloto conversacional, generador de contratos Ley 27.551, predictor de precios, tasación, scoring de morosos, OCR.</li>
+            <li>Stack: React 18, Vite, Node.js, Express, MongoDB Atlas, JWT, Cloudinary, MercadoPago, AFIP SOAP, WhatsApp Cloud API, Cloudflare Pages, Railway.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item__head">
+            <div class="item__title">KingsLV <em>— E-commerce multi-tienda</em></div>
+            <div class="item__meta">2025</div>
+          </div>
+          <ul class="bullets">
+            <li>Plataforma e-commerce con dos marcas (Kings + Vectorgas) sobre una sola base de código y un único checkout. En producción con pagos reales.</li>
+            <li>Mercado Pago con Wallet Brick + webhook firmado HMAC-SHA256 en tiempo constante. Imágenes Cloudinary (~95% más livianas). Back-office propio (10 secciones).</li>
+            <li>Stack: React 18, Node.js, Express, MongoDB, Redux, React Query, Cloudinary, Firebase Hosting. <em>kingslvstore.com</em></li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item__head">
+            <div class="item__title">Club Fans Remeras Once <em>— E-commerce cyberpunk</em></div>
+            <div class="item__meta">2025</div>
+          </div>
+          <ul class="bullets">
+            <li>Monorepo pnpm con paquete <code>@cfr/schemas</code>: esquemas Zod compartidos cliente y servidor, una sola fuente de verdad.</li>
+            <li>Checkout con integridad de stock (decremento atómico, 409 anti-oversell) y snapshot denormalizado en pedidos. Identidad cyberpunk a mano (scanlines, glow, glitch).</li>
+            <li>Stack: React 18, Vite, Redux Toolkit, RTK Query, Tailwind, Express, Mongoose, Zod.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item__head">
+            <div class="item__title">Vectorga Quiz <em>— Juego web vanilla JS</em></div>
+            <div class="item__meta">2026</div>
+          </div>
+          <ul class="bullets">
+            <li>Quiz por audio y miniatura censurada para la comunidad de creadores Los Vectorgas. Vanilla JS, sin frameworks, sin build tools. Distribución standalone (1 HTML + PowerShell mini-server).</li>
+            <li>Audio y efectos sintetizados en vivo con Web Audio API. Hybrid loading con refresh contra YouTube API cada 12h.</li>
+            <li>Próximo: integración a KingsLV como sistema de gamificación (puntos canjeables por descuentos).</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Educación</h2>
+        <ul class="edu">
+          <li>
+            <div><strong>Técnico Universitario en Programación</strong> — UTN FRRO</div>
+            <div>2022 — 2024</div>
+          </li>
+          <li>
+            <div><strong>Desarrollador Web Jr · #YoProgramo</strong> — Virtual, finalizado</div>
+            <div>Diciembre 2021</div>
+          </li>
+          <li>
+            <div><strong>Técnico en Informática Profesional y Personal</strong> — ETTP N°394 "Dr. Francisco de Gurruchaga"</div>
+            <div>2016 — 2021</div>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Idiomas</h2>
+        <ul class="langs">
+          <li><div><strong>Español</strong></div><div>Nativo</div></li>
+          <li><div><strong>Inglés técnico</strong> — lectura y comprensión de documentación</div><div>Intermedio</div></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Otros</h2>
+        <ul class="other">
+          <li><div>Disponibilidad inmediata</div><div>—</div></li>
+          <li><div>Modalidad remota o presencial</div><div>—</div></li>
+        </ul>
+      </section>
+
+      <div class="footer-note"><span>Martín Iván Segnini · @IsTincho</span><span>página 2 / 2</span></div>
+    </div>
+
+  </body>
+</html>

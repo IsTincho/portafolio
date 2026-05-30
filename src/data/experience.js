@@ -62,7 +62,7 @@ export const education = [
   },
   {
     id: 'yoprogramo',
-    period: '2023',
+    period: '2021',
     title: { es: 'Desarrollador Web Jr · #YoProgramo', en: 'Jr Web Developer · #YoProgramo' },
     org: { es: 'Virtual · Finalizado', en: 'Online · Completed' },
   },
