@@ -5,6 +5,7 @@ import Skills from './components/Skills.jsx'
 import AiSection from './components/AiSection.jsx'
 import Projects from './components/Projects.jsx'
 import Experience from './components/Experience.jsx'
+import Services from './components/Services.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 
@@ -19,6 +20,7 @@ export default function App() {
         <AiSection />
         <Projects />
         <Experience />
+        <Services />
         <Contact />
       </main>
       <Footer />

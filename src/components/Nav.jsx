@@ -10,6 +10,7 @@ const links = [
   { id: 'ai', key: 'nav.ai' },
   { id: 'projects', key: 'nav.projects' },
   { id: 'experience', key: 'nav.experience' },
+  { id: 'services', key: 'nav.services' },
   { id: 'contact', key: 'nav.contact' },
 ]
 
