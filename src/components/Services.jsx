@@ -13,7 +13,8 @@ export default function Services() {
       title: t('services.v1Title'),
       desc: t('services.v1Desc'),
       items: t('services.v1Items'),
-      anchor: 'zaigest',
+      setup: t('services.v1Setup'),
+      monthly: t('services.v1Monthly'),
     },
     {
       icon: ShoppingBag,
@@ -21,7 +22,8 @@ export default function Services() {
       title: t('services.v2Title'),
       desc: t('services.v2Desc'),
       items: t('services.v2Items'),
-      anchor: 'kingslv',
+      setup: t('services.v2Setup'),
+      monthly: t('services.v2Monthly'),
     },
   ]
 
@@ -56,10 +58,27 @@ export default function Services() {
                     <li key={j}><Check size={14} strokeWidth={2.4} /><span>{it}</span></li>
                   ))}
                 </ul>
+                <div className="svc__price">
+                  <span className="svc__price-label mono">{t('services.pricingLabel')}</span>
+                  <div className="svc__price-rows">
+                    <div className="svc__price-row">
+                      <span className="svc__price-key mono">{t('services.pricingSetup')}</span>
+                      <span className="svc__price-val">{v.setup}</span>
+                    </div>
+                    <div className="svc__price-row">
+                      <span className="svc__price-key mono">{t('services.pricingMonthly')}</span>
+                      <span className="svc__price-val">{v.monthly}</span>
+                    </div>
+                  </div>
+                </div>
               </Reveal>
             )
           })}
         </div>
+
+        <Reveal i={2} className="services__note mono">
+          {t('services.pricingNote')}
+        </Reveal>
 
         <Reveal i={1} className="services__process">
           <span className="services__process-label mono">{t('services.processLabel')}</span>
