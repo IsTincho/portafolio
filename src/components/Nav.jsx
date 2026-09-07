@@ -1,20 +1,11 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Menu, X, Download } from 'lucide-react'
+import { Menu, X, Download, ArrowLeft } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
+import { isServicesPath, langFromPath, servicesHref, homeHref, cvHref } from '../routes.js'
 import './Nav.css'
 
-const links = [
-  { id: 'about', key: 'nav.about' },
-  { id: 'skills', key: 'nav.skills' },
-  { id: 'ai', key: 'nav.ai' },
-  { id: 'projects', key: 'nav.projects' },
-  { id: 'experience', key: 'nav.experience' },
-  { id: 'services', key: 'nav.services' },
-  { id: 'contact', key: 'nav.contact' },
-]
-
-export default function Nav() {
+export default function Nav({ links = [], backHref, backLabel }) {
   const { t, lang, toggle } = useLang()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
@@ -47,7 +38,7 @@ export default function Nav() {
       if (el) obs.observe(el)
     })
     return () => obs.disconnect()
-  }, [])
+  }, [links])
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
@@ -59,15 +50,36 @@ export default function Nav() {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
 
+  const switchLang = () => {
+    const next = lang === 'es' ? 'en' : 'es'
+    if (langFromPath() === null) {
+      toggle()
+      return
+    }
+    window.location.href = isServicesPath() ? servicesHref(next) : homeHref(next)
+  }
+
   return (
     <header className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <div className="nav__inner container">
-        <button className="nav__brand" onClick={() => go('top')} aria-label="Inicio">
-          <span className="nav__mono">ISTINCHO</span>
-          <span className="nav__cursor" />
-        </button>
+        {backHref ? (
+          <a className="nav__brand" href={backHref} aria-label={backLabel}>
+            <span className="nav__mono">ISTINCHO</span>
+            <span className="nav__cursor" />
+          </a>
+        ) : (
+          <button className="nav__brand" onClick={() => go('top')} aria-label="Inicio">
+            <span className="nav__mono">ISTINCHO</span>
+            <span className="nav__cursor" />
+          </button>
+        )}
 
         <nav className="nav__links" aria-label="Principal">
+          {backHref && (
+            <a className="nav__link nav__link--back" href={backHref}>
+              <ArrowLeft size={14} strokeWidth={2.2} /> {backLabel}
+            </a>
+          )}
           {links.map((l) => (
             <button
               key={l.id}
@@ -80,12 +92,12 @@ export default function Nav() {
         </nav>
 
         <div className="nav__actions">
-          <button className="nav__lang" onClick={toggle} aria-label="Cambiar idioma">
+          <button className="nav__lang" onClick={switchLang} aria-label="Cambiar idioma">
             <span className={lang === 'es' ? 'on' : ''}>ES</span>
             <span className="nav__lang-sep">/</span>
             <span className={lang === 'en' ? 'on' : ''}>EN</span>
           </button>
-          <a className="nav__cv" href="/Martin-Segnini-CV.pdf" download>
+          <a className="nav__cv" href={cvHref(lang)} download>
             <Download size={15} strokeWidth={2.2} />
             <span>{t('nav.cv')}</span>
           </a>
@@ -104,13 +116,18 @@ export default function Nav() {
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
           >
+            {backHref && (
+              <a className="nav__drawer-link" href={backHref}>
+                <ArrowLeft size={16} strokeWidth={2.2} /> {backLabel}
+              </a>
+            )}
             {links.map((l, i) => (
               <button key={l.id} className="nav__drawer-link" onClick={() => go(l.id)}>
                 <span className="nav__drawer-idx">0{i + 1}</span>
                 {t(l.key)}
               </button>
             ))}
-            <a className="nav__drawer-cv" href="/Martin-Segnini-CV.pdf" download>
+            <a className="nav__drawer-cv" href={cvHref(lang)} download>
               <Download size={16} /> {t('nav.cv')}
             </a>
           </motion.div>

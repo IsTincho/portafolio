@@ -7,9 +7,13 @@
 /* vertical cards */
 .services__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-bottom: 1.2rem;
+}
+@media (max-width: 1080px) {
+  .services__grid { grid-template-columns: 1fr 1fr; }
+  .svc--entry { grid-column: 1 / -1; }
 }
 .svc {
   border: 1px solid var(--line);
@@ -31,6 +35,26 @@
 }
 .svc:hover { border-color: var(--accent-line); }
 .svc:hover::before { opacity: 1; }
+
+/* entry-level offer gets the visual lead */
+.svc--entry {
+  border-color: var(--accent-line);
+  padding-top: clamp(2.4rem, 4vw, 3rem);
+}
+.svc--entry::before { opacity: 0.55; }
+.svc--entry:hover::before { opacity: 1; }
+.svc__badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--accent);
+  border-bottom-right-radius: 10px;
+}
 
 .svc__head {
   display: flex;
@@ -207,9 +231,13 @@
 
 @media (max-width: 880px) {
   .services__grid { grid-template-columns: 1fr; }
+  .svc--entry { grid-column: auto; }
   .services__process ol { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 520px) {
   .services__process ol { grid-template-columns: 1fr; }
   .services__cta { flex-direction: column; align-items: flex-start; }
 }
+
+/* when /servicios renders this section as the whole page there is no hero above it */
+.services--standalone { padding-top: clamp(7rem, 14vh, 10rem); }

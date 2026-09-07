@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState, useCallback } from 'react'
 import { strings } from './translations.js'
+import { langFromPath } from '../routes.js'
 
 const LanguageContext = createContext(null)
 
@@ -7,6 +8,10 @@ const STORAGE_KEY = 'ms-lang'
 
 function getInitialLang() {
   if (typeof window === 'undefined') return 'es'
+  // A language-specific URL wins over the saved preference: someone landing on
+  // /en or /services asked for English with the link they clicked.
+  const pinned = langFromPath()
+  if (pinned) return pinned
   const saved = window.localStorage.getItem(STORAGE_KEY)
   if (saved === 'es' || saved === 'en') return saved
   return navigator.language?.toLowerCase().startsWith('en') ? 'en' : 'es'

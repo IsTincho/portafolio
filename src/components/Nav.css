@@ -177,3 +177,9 @@
 @media (max-width: 520px) {
   .nav__cv { display: none; }
 }
+
+.nav__link--back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}

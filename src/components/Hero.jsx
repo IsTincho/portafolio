@@ -15,7 +15,7 @@ const item = {
 
 const stats = [
   { value: '3', key: 'stats.production' },
-  { value: '89K+', key: 'stats.loc' },
+  { value: '2', key: 'stats.payments' },
   { value: '8', key: 'stats.integrations' },
   { value: '4', key: 'stats.years' },
 ]

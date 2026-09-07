@@ -1,12 +1,22 @@
-import { Building2, ShoppingBag, Check, ArrowUpRight } from 'lucide-react'
+import { Building2, ShoppingBag, Globe, Check, ArrowUpRight } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
 import Reveal from './Reveal.jsx'
 import './Services.css'
 
-export default function Services() {
+export default function Services({ standalone = false }) {
   const { t } = useLang()
 
   const verticals = [
+    {
+      icon: Globe,
+      entry: true,
+      label: t('services.v0Label'),
+      title: t('services.v0Title'),
+      desc: t('services.v0Desc'),
+      items: t('services.v0Items'),
+      setup: t('services.v0Setup'),
+      monthly: t('services.v0Monthly'),
+    },
     {
       icon: Building2,
       label: t('services.v1Label'),
@@ -32,7 +42,7 @@ export default function Services() {
   const go = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 
   return (
-    <section className="section services" id="services">
+    <section className={`section services ${standalone ? 'services--standalone' : ''}`} id="services">
       <div className="container">
         <Reveal className="section-head">
           <span className="kicker">{t('services.kicker')}</span>
@@ -44,7 +54,8 @@ export default function Services() {
           {verticals.map((v, i) => {
             const Icon = v.icon
             return (
-              <Reveal i={i} className="svc" key={v.label}>
+              <Reveal i={i} className={`svc ${v.entry ? 'svc--entry' : ''}`} key={v.label}>
+                {v.entry && <span className="svc__badge mono">{t('services.entryBadge')}</span>}
                 <div className="svc__head">
                   <span className="svc__icon"><Icon size={20} strokeWidth={1.8} /></span>
                   <div>
