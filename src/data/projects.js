@@ -102,9 +102,74 @@ export const projects = [
     },
   },
   {
+    id: 'allegri',
+    name: 'Pablo Allegri',
+    index: '02',
+    year: '2026',
+    url: 'https://pabloallegri.com.ar',
+    domain: 'pabloallegri.com.ar',
+    tagline: {
+      es: 'Renovación del sitio de una inmobiliaria de Rosario: catálogo en vivo y SEO resuelto en el edge.',
+      en: 'Rebuild of a Rosario real-estate agency website: live listings and SEO solved at the edge.',
+    },
+    role: {
+      es: 'Diseño, desarrollo y operación · Cliente real',
+      en: 'Design, development and operation · Real client',
+    },
+    status: {
+      es: 'En producción · dominio propio',
+      en: 'In production · custom domain',
+    },
+    stack: ['React', 'Vite', 'Cloudflare Pages', 'Pages Worker', 'ZAIGEST API', 'SEO técnico'],
+    metrics: [
+      { value: '3', label: { es: 'diseños propuestos', en: 'designs proposed' } },
+      { value: '0', label: { es: 'palabras antes del fix', en: 'words before the fix' } },
+      { value: '24', label: { es: 'propiedades en el HTML', en: 'listings in the HTML' } },
+      { value: '15', label: { es: 'rutas con head propio', en: 'routes with own head' } },
+    ],
+    highlights: {
+      es: [
+        'Le propuse tres diseños y publicamos el que eligió. El sitio es suyo, con su dominio: no una plantilla alquilada.',
+        'El catálogo sale en vivo de ZAIGEST: carga una propiedad en el CRM y aparece en la web, sin que nadie toque el sitio.',
+        'La página la dibuja React entera, así que el HTML no le mostraba una sola palabra a Google: ni el nombre de la inmobiliaria, ni la ciudad, ni una propiedad.',
+        'Un Worker de Cloudflare reescribe el head con los datos reales de cada página: /venta/departamento/rosario/centro devuelve “Departamentos en venta en Centro, Rosario”.',
+        'Contenido de arranque estático que dice lo mismo que la página real, para quien entra sin ejecutar JavaScript.',
+      ],
+      en: [
+        'I proposed three designs and shipped the one the client picked. The site is his, on his own domain — not a rented template.',
+        'The catalog comes live from ZAIGEST: he adds a listing in the CRM and it shows up on the site, with nobody touching the site.',
+        'React draws the whole page, so the HTML showed Google nothing at all: not the agency name, not the city, not a single listing.',
+        'A Cloudflare Worker rewrites the head with each page’s real data: /venta/departamento/rosario/centro returns “Departamentos en venta en Centro, Rosario”.',
+        'A static startup block that says the same thing as the real page, for anyone arriving without JavaScript.',
+      ],
+    },
+    caseStudy: {
+      es: {
+        overview: 'Sitio de una inmobiliaria de Rosario, en producción y con dominio propio. Publica el catálogo real desde ZAIGEST y resuelve el SEO en el edge, sin servidor propio.',
+        sections: [
+          { title: 'El encargo', body: 'Pablo necesitaba una web que mostrara sus propiedades y que se pudiera encontrar en Google. Le armé tres propuestas de diseño distintas y publicamos la que eligió.' },
+          { title: 'El catálogo', body: 'Las propiedades no se cargan dos veces: salen de ZAIGEST, el mismo sistema donde la inmobiliaria opera todos los días. Publicar una propiedad en el CRM la publica en la web.' },
+          { title: 'El problema real', body: 'Toda la página la dibuja React en el navegador. Eso significa que el HTML que recibe un buscador estaba vacío: ni el nombre de la inmobiliaria, ni Rosario, ni una sola propiedad. Una inmobiliaria invisible en Google es una inmobiliaria sin consultas.' },
+          { title: 'La solución en el edge', body: 'Un Worker de Cloudflare Pages intercepta cada request y reemplaza el head con los datos reales de esa página antes de que salga: la portada con la inmobiliaria y su zona, y cada búsqueda con su propio título. Sin servidor propio y sin duplicar el sitio.' },
+          { title: 'Resultado', body: '15 rutas en el sitemap, cada una con su título y descripción propios, y 24 propiedades visibles en el HTML inicial. El contenido de arranque dice lo mismo que la página real, así que no hay un sitio para Google y otro para las personas.' },
+        ],
+      },
+      en: {
+        overview: 'Website for a Rosario real-estate agency, in production on its own domain. It publishes the real catalog from ZAIGEST and solves SEO at the edge, with no server of its own.',
+        sections: [
+          { title: 'The brief', body: 'Pablo needed a site that showed his listings and could actually be found on Google. I put together three different design proposals and we shipped the one he chose.' },
+          { title: 'The catalog', body: 'Listings are never entered twice: they come from ZAIGEST, the same system the agency runs on every day. Publishing a listing in the CRM publishes it on the site.' },
+          { title: 'The real problem', body: 'React draws the entire page in the browser, which means the HTML a crawler receives was empty: no agency name, no Rosario, not a single listing. An agency invisible on Google is an agency with no enquiries.' },
+          { title: 'The fix, at the edge', body: 'A Cloudflare Pages Worker intercepts each request and swaps the head for that page’s real data before it ships: the homepage with the agency and its area, each search with its own title. No server, and no duplicate site to maintain.' },
+          { title: 'Outcome', body: '15 routes in the sitemap, each with its own title and description, and 24 listings visible in the initial HTML. The startup content says the same thing as the real page, so there is no separate site for Google and for people.' },
+        ],
+      },
+    },
+  },
+  {
     id: 'kingslv',
     name: 'KingsLV',
-    index: '02',
+    index: '03',
     year: '2025',
     url: 'https://kingslvstore.com',
     domain: 'kingslvstore.com',
@@ -164,69 +229,6 @@ export const projects = [
           { title: 'Performance', body: 'Cloudinary images with URL transforms: from 2–5 MB down to 30–100 KB (~95% lighter). Mongo indexes, N+1 removal and code-splitting of the admin bundle.' },
           { title: 'Outcome', body: 'In production, processing real payments and managing stock per variant and size. A custom Apple-style back-office with 10 sections.' },
           { title: 'Next module: gamification', body: 'We are integrating Vectorga Quiz as a points system: fans play the quiz, earn points and redeem them for store discounts. An engagement loop between creators, community and e-commerce.' },
-        ],
-      },
-    },
-  },
-  {
-    id: 'cfr',
-    name: 'Club Fans Remeras',
-    index: '03',
-    year: '2025',
-    url: 'https://cfr-repo.pages.dev/',
-    domain: 'cfr-repo.pages.dev',
-    tagline: {
-      es: 'E-commerce de cultura pop con identidad cyberpunk, monorepo y esquemas Zod compartidos cliente/servidor.',
-      en: 'Pop-culture e-commerce with a cyberpunk identity, monorepo, and shared client/server Zod schemas.',
-    },
-    role: {
-      es: 'Full-stack · identidad visual · infraestructura',
-      en: 'Full-stack · visual identity · infrastructure',
-    },
-    status: {
-      es: 'MVP funcional · listo para deploy',
-      en: 'Working MVP · deploy-ready',
-    },
-    stack: ['React 18', 'Vite', 'Redux Toolkit', 'RTK Query', 'Tailwind', 'Express', 'Mongoose', 'Zod', 'pnpm'],
-    metrics: [
-      { value: '27', label: { es: 'endpoints REST', en: 'REST endpoints' } },
-      { value: '20+', label: { es: 'esquemas Zod', en: 'Zod schemas' } },
-      { value: '7', label: { es: 'efectos visuales custom', en: 'custom visual effects' } },
-      { value: '1', label: { es: 'fuente de verdad', en: 'source of truth' } },
-    ],
-    highlights: {
-      es: [
-        'Monorepo pnpm con paquete @cfr/schemas: una sola definición Zod valida frontend y backend, sin drift.',
-        'Checkout con integridad de stock y precio: el servidor recalcula precios y decrementa stock de forma atómica (409 anti-oversell).',
-        'Snapshot denormalizado en pedidos: el comprobante histórico es inmutable aunque el producto cambie.',
-        'Identidad cyberpunk a mano: scanlines, glow, glitch RGB y clip-path, todo respetando prefers-reduced-motion.',
-      ],
-      en: [
-        'pnpm monorepo with @cfr/schemas package: a single Zod definition validates frontend and backend, no drift.',
-        'Checkout with stock & price integrity: the server recomputes prices and decrements stock atomically (409 anti-oversell).',
-        'Denormalized order snapshot: the historical receipt stays immutable even if the product changes later.',
-        'Hand-built cyberpunk identity: scanlines, glow, RGB glitch, and clip-path, all respecting prefers-reduced-motion.',
-      ],
-    },
-    caseStudy: {
-      es: {
-        overview: 'E-commerce de cultura pop (anime, bandas, deportes, gaming) para un retailer de Once, Buenos Aires. MVP funcional con identidad cyberpunk hecha a mano.',
-        sections: [
-          { title: 'El desafío', body: 'Una tienda con doble precio (minorista y mayorista), inventario real de indumentaria (variantes de color/modelo y stock por talle) y un MVP de bajo costo, sin la fricción de una pasarela de pago.' },
-          { title: 'La solución', body: 'Monorepo pnpm con un paquete @cfr/schemas: los esquemas Zod se definen una vez y validan cliente y servidor. Una sola fuente de verdad, sin desincronización entre capas. El checkout confirma el pedido por email.' },
-          { title: 'Integridad del checkout', body: 'El servidor nunca confía en los precios del cliente: los recalcula desde el producto real. Decremento de stock atómico con operadores posicionales de Mongo y respuesta 409 si el stock cambió, para no sobrevender.' },
-          { title: 'Identidad cyberpunk', body: 'Sistema de diseño propio: scanlines CRT, text-glow, bordes LED, glitch RGB en hover y esquinas chanfleadas con clip-path — todo respetando prefers-reduced-motion.' },
-          { title: 'Resultado', body: '27 endpoints REST, 20+ esquemas Zod y snapshot denormalizado en los pedidos para que el comprobante histórico sea inmutable aunque el producto cambie.' },
-        ],
-      },
-      en: {
-        overview: 'Pop-culture e-commerce (anime, bands, sports, gaming) for a retailer in Once, Buenos Aires. A working MVP with a hand-built cyberpunk identity.',
-        sections: [
-          { title: 'The challenge', body: 'A store with dual pricing (retail and wholesale), real apparel inventory (color/model variants and per-size stock) and a low-cost MVP, without the friction of a payment gateway.' },
-          { title: 'The solution', body: 'A pnpm monorepo with a @cfr/schemas package: Zod schemas are defined once and validate both client and server. A single source of truth, no drift between layers. Checkout confirms the order by email.' },
-          { title: 'Checkout integrity', body: 'The server never trusts client prices: it recomputes them from the real product. Atomic stock decrement with Mongo positional operators and a 409 response if stock changed, to avoid overselling.' },
-          { title: 'Cyberpunk identity', body: 'A custom design system: CRT scanlines, text-glow, LED borders, RGB glitch on hover and chamfered corners via clip-path — all respecting prefers-reduced-motion.' },
-          { title: 'Outcome', body: '27 REST endpoints, 20+ Zod schemas and a denormalized order snapshot so the historical receipt stays immutable even if the product changes.' },
         ],
       },
     },

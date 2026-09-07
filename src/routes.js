@@ -37,10 +37,3 @@ export function servicesHref(lang) {
 export function homeHref(lang) {
   return lang === 'en' ? '/en' : '/'
 }
-
-/** Public path of the CV PDF for the given language. */
-export function cvHref(lang) {
-  return lang === 'en'
-    ? '/cv/Martin-Segnini-CV-EN.pdf'
-    : '/cv/Martin-Segnini-CV-ES.pdf'
-}

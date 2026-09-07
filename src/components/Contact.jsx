@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Mail, Github, Linkedin, Download, ArrowUpRight, Send, Check, AlertCircle } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
-import { cvHref } from '../routes.js'
+import { requestCv } from '../requestCv.js'
 import Reveal from './Reveal.jsx'
 import './Contact.css'
 
@@ -107,7 +107,7 @@ function ContactForm() {
 }
 
 export default function Contact() {
-  const { t, lang } = useLang()
+  const { t } = useLang()
 
   return (
     <section className="section contact" id="contact">
@@ -136,9 +136,9 @@ export default function Contact() {
           )}
 
           <div className="contact__actions contact__actions--secondary">
-            <a className="btn btn--ghost" href={cvHref(lang)} download>
+            <button className="btn btn--ghost" onClick={() => requestCv(t('contact.formKindJob'))}>
               {t('contact.cvCta')} <Download size={16} />
-            </a>
+            </button>
           </div>
 
           <div className="contact__socials">

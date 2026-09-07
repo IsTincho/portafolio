@@ -2,7 +2,7 @@ export const strings = {
   es: {
     seo: {
       homeTitle: 'IsTincho — Desarrollador Full Stack',
-      homeDesc: 'Martín Iván Segnini — Desarrollador Full Stack. Sistemas en producción: SaaS multi-tenant, pasarelas de pago, IA aplicada y arquitecturas seguras.',
+      homeDesc: 'IsTincho — Desarrollador Full Stack. Sistemas en producción: SaaS multi-tenant, pasarelas de pago, IA aplicada y arquitecturas seguras.',
       servicesTitle: 'Servicios y precios — IsTincho',
       servicesDesc: 'Renuevo sitios web viejos y construyo sistemas de gestión a medida: e-commerce, CRM inmobiliario, pagos online y facturación AFIP. Alcance y precios.',
     },
@@ -14,7 +14,7 @@ export const strings = {
       experience: 'Experiencia',
       services: 'Servicios',
       contact: 'Contacto',
-      cv: 'Descargar CV',
+      cv: 'Pedir CV',
     },
     hero: {
       status: 'Disponible para proyectos',
@@ -110,12 +110,13 @@ export const strings = {
         'SEO técnico: títulos, metadatos y sitemap para que te encuentren cuando te buscan.',
         'Migro el contenido que ya tenés. No arrancás de cero ni perdés lo que funciona.',
         'Entrega en dos semanas, con dominio y hosting configurados.',
+        'Ya lo hice: pabloallegri.com.ar. Le pasé tres diseños, eligió uno y quedó con dominio propio.',
       ],
       v0Setup: 'USD 350 – 600',
       v0Monthly: 'USD 15 – 25 / mes',
       v1Label: 'Inmobiliarias',
       v1Title: 'Gestión inmobiliaria integral.',
-      v1Desc: 'Basado en lo aprendido construyendo ZAIGEST, en producción con una inmobiliaria real.',
+      v1Desc: 'Basado en lo aprendido construyendo ZAIGEST, en producción con Pablo Allegri Gestión Inmobiliaria (Rosario).',
       v1Items: [
         'Multi-tenant: cada inmobiliaria con sus datos aislados.',
         'Contratos, recibos, liquidaciones a propietarios y ajustes por índices oficiales (ICL/IPC/UVA).',
@@ -128,7 +129,7 @@ export const strings = {
       v1Monthly: 'USD 400 / mes',
       v2Label: 'Comercios & retail',
       v2Title: 'E-commerce y back-office a medida.',
-      v2Desc: 'Basado en KingsLV (indumentaria) y CFR (cultura pop), ambos con pagos reales.',
+      v2Desc: 'Basado en KingsLV: dos tiendas en producción, con pagos reales y back-office propio.',
       v2Items: [
         'Catálogo con variantes (color, modelo) y stock por talle.',
         'Carrito, checkout y pasarela de pagos con webhook firmado y validación de stock server-side.',
@@ -167,7 +168,7 @@ export const strings = {
       sub: '¿Tenés un proyecto o una posición full-stack? Escribime.',
       emailLabel: 'Email',
       cta: 'Enviar email',
-      cvCta: 'Descargar CV',
+      cvCta: 'Pedime el CV',
       availability: 'Disponibilidad inmediata · Remoto o presencial',
       formName: 'Nombre',
       formEmail: 'Tu email',
@@ -190,7 +191,7 @@ export const strings = {
   en: {
     seo: {
       homeTitle: 'IsTincho — Full Stack Developer',
-      homeDesc: 'Martin Segnini — Full Stack Developer. Systems in production: multi-tenant SaaS, payment gateways, applied AI and secure architectures.',
+      homeDesc: 'IsTincho — Full Stack Developer. Systems in production: multi-tenant SaaS, payment gateways, applied AI and secure architectures.',
       servicesTitle: 'Services and pricing — IsTincho',
       servicesDesc: 'I rebuild dated websites and build custom management systems: e-commerce, real-estate CRM, online payments and electronic invoicing. Scope and pricing.',
     },
@@ -202,7 +203,7 @@ export const strings = {
       experience: 'Experience',
       services: 'Services',
       contact: 'Contact',
-      cv: 'Download CV',
+      cv: 'Request CV',
     },
     hero: {
       status: 'Available for projects',
@@ -298,12 +299,13 @@ export const strings = {
         'Technical SEO: titles, metadata and sitemap so people find you when they search.',
         'I migrate the content you already have. You do not start over or lose what works.',
         'Delivered in two weeks, with domain and hosting configured.',
+        'Already done: pabloallegri.com.ar. I proposed three designs, the client picked one, and it shipped on his own domain.',
       ],
       v0Setup: 'USD 350 – 600',
       v0Monthly: 'USD 15 – 25 / month',
       v1Label: 'Real estate',
       v1Title: 'End-to-end agency management.',
-      v1Desc: 'Based on what I learned building ZAIGEST, in production with a real agency.',
+      v1Desc: 'Based on what I learned building ZAIGEST, in production with Pablo Allegri Gestión Inmobiliaria (Rosario).',
       v1Items: [
         'Multi-tenant: each agency with its data isolated.',
         'Rental contracts, receipts, owner settlements and adjustments by official indexes (ICL/IPC/UVA).',
@@ -316,7 +318,7 @@ export const strings = {
       v1Monthly: 'USD 400 / month',
       v2Label: 'Retail & shops',
       v2Title: 'E-commerce and admin panel, tailor-made.',
-      v2Desc: 'Based on KingsLV (apparel) and CFR (pop-culture), both processing real payments.',
+      v2Desc: 'Based on KingsLV: two stores in production, with real payments and a custom back office.',
       v2Items: [
         'Catalog with variants (color, model) and per-size stock.',
         'Cart, checkout and payment gateway with signed webhook and server-side stock validation.',
@@ -355,7 +357,7 @@ export const strings = {
       sub: 'Got a project or a full-stack role? Drop me a line.',
       emailLabel: 'Email',
       cta: 'Send email',
-      cvCta: 'Download CV',
+      cvCta: 'Ask me for my CV',
       availability: 'Immediate availability · Remote or on-site',
       formName: 'Name',
       formEmail: 'Your email',

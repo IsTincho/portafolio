@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X, Download, ArrowLeft } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
-import { isServicesPath, langFromPath, servicesHref, homeHref, cvHref } from '../routes.js'
+import { isServicesPath, langFromPath, servicesHref, homeHref } from '../routes.js'
+import { requestCv } from '../requestCv.js'
 import './Nav.css'
 
 export default function Nav({ links = [], backHref, backLabel }) {
@@ -48,6 +49,11 @@ export default function Nav({ links = [], backHref, backLabel }) {
   const go = (id) => {
     setOpen(false)
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const askCv = () => {
+    setOpen(false)
+    requestCv(t('contact.formKindJob'))
   }
 
   const switchLang = () => {
@@ -97,10 +103,10 @@ export default function Nav({ links = [], backHref, backLabel }) {
             <span className="nav__lang-sep">/</span>
             <span className={lang === 'en' ? 'on' : ''}>EN</span>
           </button>
-          <a className="nav__cv" href={cvHref(lang)} download>
+          <button className="nav__cv" onClick={askCv}>
             <Download size={15} strokeWidth={2.2} />
             <span>{t('nav.cv')}</span>
-          </a>
+          </button>
           <button className="nav__burger" onClick={() => setOpen((v) => !v)} aria-label="Menú">
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -127,9 +133,9 @@ export default function Nav({ links = [], backHref, backLabel }) {
                 {t(l.key)}
               </button>
             ))}
-            <a className="nav__drawer-cv" href={cvHref(lang)} download>
+            <button className="nav__drawer-cv" onClick={askCv}>
               <Download size={16} /> {t('nav.cv')}
-            </a>
+            </button>
           </motion.div>
         )}
       </AnimatePresence>

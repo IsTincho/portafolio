@@ -25,3 +25,6 @@ yarn-error.log*
 .idea/
 .DS_Store
 Thumbs.db
+
+# CV: nombre legal y mail personal, fuera de un repo publico
+/cv/
