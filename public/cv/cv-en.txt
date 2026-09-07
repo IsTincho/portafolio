@@ -1,0 +1,88 @@
+Martin Segnini
+Full Stack Developer · React · Node.js · MongoDB
+Argentina · Remote (UTC−3) · tinchosegnini@gmail.com · linkedin.com/in/martin-segnini · github.com/IsTincho · tincho.pages.dev
+
+SUMMARY
+-------
+Full stack developer with systems of my own in production, processing real money. Technical co-founder of ZAIGEST, a multi-tenant real-estate SaaS with AI, live with a real estate agency as its client. I own the full cycle: architecture, data modeling, frontend, payments and tax invoicing, deployment and operations. University Technician in Programming (UTN FRRO).
+
+TECHNICAL SKILLS
+----------------
+Languages: JavaScript (ESM), TypeScript, C#, SQL, HTML5, CSS3
+Frontend: React 18, Vite, React Query, Redux Toolkit / RTK Query, Tailwind, Framer Motion, PWA
+Backend: Node.js, Express, REST APIs, JWT, bcrypt, middleware (auth, multi-tenancy, rate limiting), cron jobs, Zod
+Databases: MongoDB (Mongoose, compound indexes, aggregation pipelines, multi-tenant isolation), MySQL, Entity Framework
+Integrations: Mercado Pago, AFIP e-invoicing (SOAP / WSAA), WhatsApp Cloud API, Groq LLM, Cloudinary, HMAC-signed webhooks
+DevOps & tooling: Cloudflare Pages, Railway, MongoDB Atlas, Firebase, Render, GitHub Actions, DNS, Git, Postman, pnpm monorepos
+Applied AI: Shipping LLMs to production, prompt design, RAG, MCP (Model Context Protocol), agentic development workflows
+
+EXPERIENCE
+----------
+
+Technical Co-founder / Full Stack Developer — ZAIGEST
+2026 — Present · Argentina · Remote · zaigest.com.ar · 48 REST routers · 15+ MongoDB entities · 80+ React components
+- Designed and built end to end a multi-tenant real-estate management SaaS now in production, with a real estate agency running its daily operation on it: contracts, settlements, receipts, leads, listings, finance and self-service portals.
+- Multi-tenant architecture with isolation enforced per query by empresaId, not just in the UI. JWT auth, tenant middleware, plan guard, rate limiting and security hardening (escapeRegex, express-mongo-sanitize, per-endpoint body limits, secrets management).
+- Implemented AFIP electronic invoicing (SOAP / WSAA, RG 5616 and 4291) with per-company certificates encrypted using AES-GCM.
+- Integrated Mercado Pago payments and WhatsApp Cloud API notifications, both with HMAC-verified webhooks over the raw body and carefully ordered middleware.
+- Shipped 8 AI capabilities on Groq LLM — document OCR, delinquency scoring, contract generation, appraisal and SEO descriptions — with a model fallback cascade, backoff retry on 429, and the API key kept server-side.
+- Cut the initial bundle from 815 KB to 369 KB (−55%) through route-level code splitting.
+
+Freelance Full Stack Developer — Private clients
+2024 — Present · Argentina
+- Built and operate KingsLV, a multi-store e-commerce platform in production processing real payments: two brands on a single codebase and one checkout (kingslvstore.com).
+- Mercado Pago checkout with Wallet Brick and a constant-time HMAC-SHA256 verified webhook, plus server-side stock validation.
+- Optimized image delivery via Cloudinary: from 2–5 MB down to 30–100 KB per asset, ~95% lighter.
+- Built a custom 10-section back office so the client runs the business without depending on me. Requirements gathering, custom interface design and MySQL database optimization.
+
+PROJECTS
+--------
+
+ZAIGEST — Real-estate SaaS with AI (in production)
+2026 — Present · zaigest.com.ar
+- Full multi-tenant real-estate CRM with electronic invoicing, online payments and 8 AI modules.
+- React 18, Vite, Node.js, Express, MongoDB Atlas, Groq LLM, AFIP SOAP, Mercado Pago, WhatsApp Cloud API, Cloudflare Pages, Railway.
+
+KingsLV — Multi-store e-commerce (in production, real payments)
+2025 · kingslvstore.com
+- Two brands, one codebase, one checkout. Mercado Pago gateway, custom back office, and ~95% lighter assets.
+- React 18, Node.js, Express, MongoDB, Redux, React Query, Cloudinary, Firebase, Render.
+
+Club Fans Remeras — E-commerce with shared schemas
+2025 · cfr-repo.pages.dev
+- pnpm monorepo with a @cfr/schemas package: a single Zod definition validates client and server, with no drift between layers.
+- Checkout with stock and price integrity: the server recalculates prices and decrements stock atomically (409 anti-oversell), with a denormalized order snapshot so the historical receipt stays immutable.
+- 27 REST endpoints, 20+ Zod schemas. React 18, Vite, Redux Toolkit, RTK Query, Tailwind, Express, Mongoose.
+
+Vectorga Quiz — Web game with no frameworks
+2026
+- Audio and thumbnail guessing quiz in vanilla JavaScript: no frameworks, no build tools, shipped as a single standalone HTML file.
+- Audio and effects synthesized live with the Web Audio API; hybrid loading with a YouTube API refresh every 12 h.
+
+EARLIER EXPERIENCE
+------------------
+
+IT Technician — Private clients
+2020 — 2021 · Argentina · PC assembly, configuration and maintenance, software installation and malware removal.
+
+EDUCATION
+---------
+
+University Technician in Programming — UTN FRRO
+2022 — 2024 · Rosario, Argentina
+
+Junior Web Developer — #YoProgramo
+2021 · Online, completed
+
+Professional and Personal IT Technician — ETTP N°394 "Dr. Francisco de Gurruchaga"
+2016 — 2021 · Argentina
+
+LANGUAGES
+---------
+Spanish: Native
+English: Intermediate. I read and write technical documentation and work with English-speaking teams in writing.
+
+ADDITIONAL
+----------
+- Full-time streamer and verified Kick.com Partner, part of the gaming creator group Los Vectorgas. I built KingsLV for my own audience: I understand the product from the user's side, not only the builder's.
+- Available immediately. Open to remote or on-site work.

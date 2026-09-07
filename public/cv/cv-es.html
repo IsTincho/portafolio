@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Martín Iván Segnini — Desarrollador Full Stack — CV</title>
+<style>
+  :root { --accent:#c8342c; --ink:#111318; --text:#26282e; --dim:#5a5c64; --line:#dcdce0; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { background:#fff; color:var(--text);
+    font-family:"Hanken Grotesk","Segoe UI",Arial,Helvetica,sans-serif;
+    -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  @page { size:A4; margin:0; }
+  .page { width:210mm; min-height:297mm; padding:12mm 15mm 8mm; background:#fff;
+    font-size:9.7pt; line-height:1.34; }
+  .page + .page { page-break-before:always; }
+
+  h1 { font-size:19pt; font-weight:700; letter-spacing:-.02em; color:var(--ink); line-height:1.05; }
+  .role { margin-top:2mm; font-size:11pt; font-weight:600; color:var(--accent); }
+  .contact { margin-top:2.4mm; font-size:9pt; color:var(--dim); }
+  .head { padding-bottom:4mm; border-bottom:2px solid var(--ink); margin-bottom:3mm; }
+
+  h2 { font-size:9pt; font-weight:700; text-transform:uppercase; letter-spacing:.14em;
+    color:var(--accent); margin:0 0 2.5mm; padding-bottom:1.2mm; border-bottom:1px solid var(--line); }
+  section { margin-bottom:4mm; }
+  section:last-child, .page > section:last-of-type { margin-bottom:0; }
+
+  p.lede { font-size:10pt; }
+  p.lede strong { color:var(--ink); font-weight:600; }
+
+  .row { display:flex; gap:3mm; margin-bottom:1.3mm; }
+  .row b { flex:0 0 28mm; color:var(--ink); font-weight:600; font-size:9.5pt; }
+  .row span { flex:1; font-size:9.6pt; }
+
+  .job { margin-bottom:3.4mm; }
+  .job:last-child { margin-bottom:0; }
+  .job__t { font-size:10.5pt; font-weight:700; color:var(--ink); }
+  .job__t em { font-style:normal; color:var(--accent); }
+  .job__m { font-size:8.6pt; color:var(--dim); margin:.4mm 0 1.4mm; }
+  ul { list-style:none; padding-left:0; }
+  ul li { position:relative; padding-left:3.4mm; margin-bottom:.5mm; }
+  ul li::before { content:"–"; position:absolute; left:0; color:var(--accent); font-weight:700; }
+  ul li b { color:var(--ink); font-weight:600; }
+
+  .foot { margin-top:3mm; padding-top:2mm; border-top:1px solid var(--line);
+    font-size:8pt; color:var(--dim); display:flex; justify-content:space-between; }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header class="head">
+    <h1>Martín Iván Segnini</h1>
+    <p class="role">Desarrollador Full Stack · React · Node.js · MongoDB</p>
+    <p class="contact">
+      Argentina · Remoto &nbsp;·&nbsp; tinchosegnini@gmail.com &nbsp;·&nbsp;
+      linkedin.com/in/martin-segnini &nbsp;·&nbsp; github.com/IsTincho &nbsp;·&nbsp; tincho.pages.dev
+    </p>
+  </header>
+
+  <section>
+    <h2>Perfil</h2>
+    <p class="lede">Desarrollador full stack con <strong>sistemas propios corriendo en producción y cobrando dinero real</strong>. Co-fundador técnico de ZAIGEST, SaaS multi-tenant inmobiliario con IA que opera con una inmobiliaria como cliente. Trabajo el ciclo completo: arquitectura, modelado de datos, frontend, integraciones de pago y facturación, deploy y operación. Técnico Universitario en Programación (UTN FRRO).</p>
+  </section>
+
+  <section>
+    <h2>Stack técnico</h2>
+    <div class="row"><b>Lenguajes</b><span>JavaScript (ESM), TypeScript, C#, SQL, HTML5, CSS3</span></div>
+    <div class="row"><b>Frontend</b><span>React 18, Vite, React Query, Redux Toolkit / RTK Query, Tailwind, Framer Motion, PWA</span></div>
+    <div class="row"><b>Backend</b><span>Node.js, Express, REST APIs, JWT, bcrypt, middleware (auth, multi-tenancy, rate limit), cron jobs, Zod</span></div>
+    <div class="row"><b>Bases de datos</b><span>MongoDB (Mongoose, índices compuestos, agregaciones, aislamiento multi-tenant), MySQL, Entity Framework</span></div>
+    <div class="row"><b>Integraciones</b><span>Mercado Pago, AFIP (SOAP / WSAA), WhatsApp Cloud API, Groq LLM, Cloudinary, Twilio, webhooks firmados HMAC</span></div>
+    <div class="row"><b>DevOps y tooling</b><span>Cloudflare Pages, Railway, MongoDB Atlas, Firebase, Render, GitHub Actions, DNS, Git, Postman, monorepos pnpm</span></div>
+    <div class="row"><b>IA aplicada</b><span>Integración de LLMs en producción, diseño de prompts, RAG, MCP (Model Context Protocol), desarrollo asistido por agentes</span></div>
+  </section>
+
+  <section>
+    <h2>Experiencia</h2>
+
+    <div class="job">
+      <div class="job__t">Co-fundador Técnico / Desarrollador Full Stack — <em>ZAIGEST</em></div>
+      <div class="job__m">2026 — Presente · Argentina · Remoto · zaigest.com.ar · 48 routers REST · 15+ entidades MongoDB · 80+ componentes React</div>
+      <ul>
+        <li>Diseñé y construí de punta a punta un <b>SaaS multi-tenant de gestión inmobiliaria</b> hoy en producción, con una inmobiliaria operando sobre él: contratos, liquidaciones, recibos, leads, propiedades, finanzas y portales de inquilino y propietario.</li>
+        <li>Arquitectura multi-tenant con <b>aislamiento verificado por empresaId en cada query</b>, no sólo en la UI. Auth JWT, middleware de tenant, plan guard, rate limiting y hardening (escapeRegex, express-mongo-sanitize, límites de body por endpoint, gestión de secrets).</li>
+        <li>Implementé <b>facturación electrónica AFIP</b> (SOAP / WSAA, RG 5616 y 4291) con certificados por empresa encriptados con AES-GCM.</li>
+        <li>Integré <b>cobros con Mercado Pago y notificaciones por WhatsApp Cloud API</b>, ambos con webhooks verificados por HMAC sobre raw body y orden de middleware controlado.</li>
+        <li>Sumé <b>8 capacidades de IA sobre Groq LLM</b> —OCR de documentos, scoring de morosos, generación de contratos Ley 27.551, tasación y descripciones SEO— con cascada de fallback de modelos, retry con backoff ante 429 y API key siempre server-side.</li>
+        <li>Reduje el bundle inicial de <b>815 KB a 369 KB (−55%)</b> con code splitting por ruta.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job__t">Desarrollador Full Stack Freelance — <em>Clientes particulares</em></div>
+      <div class="job__m">2024 — Presente · Argentina</div>
+      <ul>
+        <li>Construí y opero <b>KingsLV</b>, e-commerce multi-tienda en producción <b>procesando pagos reales</b>: dos marcas sobre una sola base de código y un único checkout (kingslvstore.com).</li>
+        <li>Pasarela Mercado Pago con Wallet Brick y <b>webhook verificado por HMAC-SHA256 en tiempo constante</b>, más validación de stock del lado servidor.</li>
+        <li>Optimicé la entrega de imágenes vía Cloudinary: de 2–5 MB a 30–100 KB por asset, <b>~95% menos peso</b>.</li>
+        <li>Desarrollé un back-office propio de 10 secciones para que el cliente opere el negocio sin depender de mí. Relevamiento de requisitos, diseño de interfaces a medida y optimización de bases MySQL.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <div class="foot"><span>Martín Iván Segnini — Desarrollador Full Stack</span><span>Página 1 / 2</span></div>
+</div>
+
+<div class="page">
+  <section>
+    <h2>Proyectos</h2>
+
+    <div class="job">
+      <div class="job__t">ZAIGEST — SaaS inmobiliario con IA <em>(en producción)</em></div>
+      <div class="job__m">2026 — Presente · zaigest.com.ar</div>
+      <ul>
+        <li>CRM inmobiliario completo multi-tenant con facturación electrónica, cobros online y 8 módulos de IA.</li>
+        <li>React 18, Vite, Node.js, Express, MongoDB Atlas, Groq LLM, AFIP SOAP, Mercado Pago, WhatsApp Cloud API, Cloudflare Pages, Railway.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job__t">KingsLV — E-commerce multi-tienda <em>(en producción, pagos reales)</em></div>
+      <div class="job__m">2025 · kingslvstore.com</div>
+      <ul>
+        <li>Dos marcas, una base de código, un checkout. Pasarela Mercado Pago, back-office propio y assets ~95% más livianos.</li>
+        <li>React 18, Node.js, Express, MongoDB, Redux, React Query, Cloudinary, Firebase, Render.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job__t">Club Fans Remeras — E-commerce con esquemas compartidos</div>
+      <div class="job__m">2025 · cfr-repo.pages.dev</div>
+      <ul>
+        <li>Monorepo pnpm con paquete <b>@cfr/schemas</b>: una sola definición Zod valida cliente y servidor, sin drift entre capas.</li>
+        <li>Checkout con integridad de stock y precio: el servidor recalcula precios y decrementa stock de forma atómica (409 anti-oversell), con snapshot denormalizado del pedido para que el comprobante histórico quede inmutable.</li>
+        <li>27 endpoints REST, 20+ esquemas Zod. React 18, Vite, Redux Toolkit, RTK Query, Tailwind, Express, Mongoose.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job__t">Vectorga Quiz — Juego web sin frameworks</div>
+      <div class="job__m">2026</div>
+      <ul>
+        <li>Quiz por audio y miniatura en JavaScript vanilla: sin frameworks ni build tools, distribuido como un único HTML standalone.</li>
+        <li>Audio y efectos sintetizados en vivo con Web Audio API; carga híbrida con refresh contra la YouTube API cada 12 h.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experiencia previa</h2>
+    <div class="job">
+      <div class="job__t">Técnico en Informática — <em>Clientes particulares</em></div>
+      <div class="job__m">2020 — 2021 · Argentina · Ensamblado, configuración y mantenimiento de equipos, instalación de software y remoción de malware.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Educación</h2>
+    <div class="job">
+      <div class="job__t">Técnico Universitario en Programación — <em>UTN FRRO</em></div>
+      <div class="job__m">2022 — 2024 · Rosario, Argentina</div>
+    </div>
+    <div class="job">
+      <div class="job__t">Desarrollador Web Jr — <em>#YoProgramo</em></div>
+      <div class="job__m">2021 · Cursada virtual, finalizada</div>
+    </div>
+    <div class="job">
+      <div class="job__t">Técnico en Informática Profesional y Personal — <em>ETTP N°394 "Dr. Francisco de Gurruchaga"</em></div>
+      <div class="job__m">2016 — 2021 · Argentina</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Idiomas</h2>
+    <div class="row"><b>Español</b><span>Nativo</span></div>
+    <div class="row"><b>Inglés</b><span>Intermedio. Leo y escribo documentación técnica y trabajo con equipos en inglés de forma escrita.</span></div>
+  </section>
+
+  <section>
+    <h2>Otros</h2>
+    <ul>
+      <li>Streamer full time y Partner verificado en Kick.com, parte del grupo de creadores <b>Los Vectorgas</b>. Construí KingsLV para mi propia audiencia: entiendo el producto desde el lado de quien lo usa, no sólo de quien lo escribe.</li>
+      <li>Disponibilidad inmediata. Modalidad remota o presencial.</li>
+    </ul>
+  </section>
+
+  <div class="foot"><span>Martín Iván Segnini — Desarrollador Full Stack</span><span>Página 2 / 2</span></div>
+</div>
+
+</body>
+</html>
