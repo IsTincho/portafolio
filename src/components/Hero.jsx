@@ -66,7 +66,7 @@ export default function Hero() {
             <span className="spec__path">~/istincho</span>
           </div>
           <dl className="spec__body">
-            <div><dt>ROLE</dt><dd>Full-Stack Dev</dd></div>
+            <div><dt>ROLE</dt><dd>Full-Stack · Systems design</dd></div>
             <div><dt>BASE</dt><dd className="spec__loc"><MapPin size={12} /> {t('hero.loc')}</dd></div>
             <div><dt>CORE</dt><dd>React · Node · Mongo</dd></div>
             <div><dt>EDU</dt><dd>UTN FRRO</dd></div>

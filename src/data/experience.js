@@ -2,7 +2,7 @@ export const experience = [
   {
     id: 'zaigest',
     period: { es: '2026 — Presente', en: '2026 — Present' },
-    role: { es: 'Co-fundador Técnico / Full-Stack', en: 'Technical Co-founder / Full-Stack' },
+    role: { es: 'Co-fundador Técnico · Arquitectura y desarrollo', en: 'Technical Co-founder · Architecture & Development' },
     org: 'ZAIGEST',
     place: { es: 'Argentina · Remoto', en: 'Argentina · Remote' },
     current: true,

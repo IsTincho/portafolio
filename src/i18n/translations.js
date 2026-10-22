@@ -1,8 +1,8 @@
 export const strings = {
   es: {
     seo: {
-      homeTitle: 'IsTincho — Desarrollador Full Stack',
-      homeDesc: 'IsTincho — Desarrollador Full Stack. Sistemas en producción: SaaS multi-tenant, pasarelas de pago, IA aplicada y arquitecturas seguras.',
+      homeTitle: 'IsTincho — Full Stack · Arquitectura de sistemas',
+      homeDesc: 'IsTincho — Full Stack con foco en diseño y arquitectura de sistemas SaaS. Sistemas en producción: multi-tenant, pasarelas de pago e IA aplicada, desarrollados con agentes de IA.',
       servicesTitle: 'Servicios y precios — IsTincho',
       servicesDesc: 'Renuevo sitios web viejos y construyo sistemas de gestión a medida: e-commerce, CRM inmobiliario, pagos online y facturación AFIP. Alcance y precios.',
     },
@@ -18,11 +18,11 @@ export const strings = {
     },
     hero: {
       status: 'Disponible para proyectos',
-      role: 'Desarrollador Full Stack',
+      role: 'Full Stack · Diseño y arquitectura de sistemas',
       titleA: 'Construyo sistemas',
       titleB: 'que corren en',
       titleC: 'producción.',
-      lede: 'Co-fundador técnico de ZAIGEST. Diseño y desarrollo end-to-end: SaaS multi-tenant, pasarelas de pago, IA aplicada y arquitecturas seguras.',
+      lede: 'Co-fundador técnico de ZAIGEST. Entiendo el negocio, diseño la arquitectura y dirijo el desarrollo con agentes de IA: SaaS multi-tenant, pasarelas de pago e IA aplicada.',
       ctaProjects: 'Ver proyectos',
       ctaContact: 'Contactar',
       loc: 'Argentina',
@@ -36,9 +36,9 @@ export const strings = {
     about: {
       kicker: '// perfil',
       title: 'Perfil orientado a producto.',
-      p1: 'Desarrollador Full Stack enfocado en el ecosistema JavaScript moderno —React 18, Node.js, Express, MongoDB— y Técnico Universitario en Programación (UTN FRRO).',
+      p1: 'Full Stack con foco en diseño y arquitectura de sistemas SaaS, sobre el ecosistema JavaScript moderno —React 18, Node.js, Express, MongoDB—. Técnico Universitario en Programación (UTN FRRO).',
       p2: 'Actualmente co-fundador técnico de ZAIGEST, donde lidero el diseño y desarrollo de punta a punta: arquitectura backend, modelado de datos, frontend e integraciones externas (MercadoPago, AFIP, WhatsApp Cloud API, Cloudinary, Groq LLM).',
-      p3: 'Priorizo entregar features funcionales, seguras y mantenibles. No solo escribo código: opero sistemas reales con clientes reales.',
+      p3: 'Dirijo el desarrollo con agentes de IA (Claude Code) en un flujo de especificación, revisión y prueba: yo decido el diseño y reviso cada cambio antes de que llegue a producción. Opero sistemas reales con clientes reales.',
       beyondLabel: '// también',
       beyond: 'Streamer full-time y Partner verificado en Kick.com, parte de Los Vectorgas — grupo de creadores de contenido gaming de Argentina. Entiendo el producto desde los dos lados: el que construye y el que tiene audiencia.',
       focusLabel: 'Foco',
@@ -190,8 +190,8 @@ export const strings = {
 
   en: {
     seo: {
-      homeTitle: 'IsTincho — Full Stack Developer',
-      homeDesc: 'IsTincho — Full Stack Developer. Systems in production: multi-tenant SaaS, payment gateways, applied AI and secure architectures.',
+      homeTitle: 'IsTincho — Full Stack · Systems Architecture',
+      homeDesc: 'IsTincho — Full Stack focused on SaaS systems design and architecture. Systems in production: multi-tenant, payment gateways and applied AI, built with AI coding agents.',
       servicesTitle: 'Services and pricing — IsTincho',
       servicesDesc: 'I rebuild dated websites and build custom management systems: e-commerce, real-estate CRM, online payments and electronic invoicing. Scope and pricing.',
     },
@@ -207,11 +207,11 @@ export const strings = {
     },
     hero: {
       status: 'Available for projects',
-      role: 'Full-Stack Developer',
+      role: 'Full Stack · Systems design & architecture',
       titleA: 'I build systems',
       titleB: 'that run in',
       titleC: 'production.',
-      lede: 'Technical co-founder of ZAIGEST. End-to-end design and development: multi-tenant SaaS, payment gateways, applied AI, and secure architectures.',
+      lede: 'Technical co-founder of ZAIGEST. I understand the business, design the architecture and lead development with AI coding agents: multi-tenant SaaS, payment gateways and applied AI.',
       ctaProjects: 'View work',
       ctaContact: 'Get in touch',
       loc: 'Argentina',
@@ -225,9 +225,9 @@ export const strings = {
     about: {
       kicker: '// about',
       title: 'A product-minded engineer.',
-      p1: 'Full-Stack Developer focused on the modern JavaScript ecosystem —React 18, Node.js, Express, MongoDB— and a University Programming Technician (UTN FRRO).',
+      p1: 'Full Stack focused on SaaS systems design and architecture, on the modern JavaScript ecosystem —React 18, Node.js, Express, MongoDB—. University Programming Technician (UTN FRRO).',
       p2: 'Currently technical co-founder of ZAIGEST, where I lead end-to-end design and development: backend architecture, data modeling, frontend, and external integrations (MercadoPago, AFIP, WhatsApp Cloud API, Cloudinary, Groq LLM).',
-      p3: 'I prioritize shipping functional, secure, maintainable features. I don’t just write code: I operate real systems for real clients.',
+      p3: 'I lead development with AI coding agents (Claude Code) in a spec, review and test loop: I own the design and review every change before it ships. I operate real systems for real clients.',
       beyondLabel: '// also',
       beyond: 'Full-time streamer and verified Partner on Kick.com, part of Los Vectorgas — an Argentine gaming content-creator collective. I understand product from both sides: the one who builds it and the one with an audience.',
       focusLabel: 'Focus',
