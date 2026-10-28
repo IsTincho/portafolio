@@ -1,6 +1,7 @@
 import { Building2, ShoppingBag, Globe, Check, ArrowUpRight } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
 import Reveal from './Reveal.jsx'
+import { scrollBehavior } from '../scrollBehavior.js'
 import './Services.css'
 
 export default function Services({ standalone = false }) {
@@ -39,7 +40,7 @@ export default function Services({ standalone = false }) {
 
   const process = t('services.process')
 
-  const go = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  const go = (id) => document.getElementById(id)?.scrollIntoView({ behavior: scrollBehavior() })
 
   return (
     <section className={`section services ${standalone ? 'services--standalone' : ''}`} id="services">

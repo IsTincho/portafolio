@@ -1,16 +1,18 @@
 import { useEffect, useRef, useState } from 'react'
-import { useInView } from 'framer-motion'
+import { useInView, useReducedMotion } from 'framer-motion'
 
 // Animates the leading number inside a string like "89K+", "~95%", "48".
 export default function Counter({ value, duration = 1400 }) {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-40px' })
+  const reduceMotion = useReducedMotion()
   const [display, setDisplay] = useState(value)
 
   const match = String(value).match(/^([^\d]*)(\d+)(.*)$/)
 
   useEffect(() => {
-    if (!inView || !match) return
+    // Reduced motion: keep the final value, no count-up.
+    if (!inView || !match || reduceMotion) return
     const [, prefix, numStr, suffix] = match
     const target = parseInt(numStr, 10)
     if (target === 0) {

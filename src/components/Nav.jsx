@@ -4,6 +4,7 @@ import { Menu, X, Download, ArrowLeft } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
 import { isServicesPath, langFromPath, servicesHref, homeHref } from '../routes.js'
 import { requestCv } from '../requestCv.js'
+import { scrollBehavior } from '../scrollBehavior.js'
 import './Nav.css'
 
 export default function Nav({ links = [], backHref, backLabel }) {
@@ -48,7 +49,7 @@ export default function Nav({ links = [], backHref, backLabel }) {
 
   const go = (id) => {
     setOpen(false)
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    document.getElementById(id)?.scrollIntoView({ behavior: scrollBehavior() })
   }
 
   const askCv = () => {

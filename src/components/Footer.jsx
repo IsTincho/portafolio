@@ -1,5 +1,6 @@
 import { useLang } from '../i18n/LanguageContext.jsx'
 import { homeHref } from '../routes.js'
+import { scrollBehavior } from '../scrollBehavior.js'
 import './Footer.css'
 
 export default function Footer() {
@@ -9,7 +10,7 @@ export default function Footer() {
   // #top only exists on the home page; elsewhere the brand goes home instead.
   const toTop = () => {
     const el = document.getElementById('top')
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+    if (el) el.scrollIntoView({ behavior: scrollBehavior() })
     else window.location.href = homeHref(lang)
   }
 

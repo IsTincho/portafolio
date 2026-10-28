@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { ArrowDown, ArrowUpRight, MapPin } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
 import Counter from './Counter.jsx'
+import { scrollBehavior } from '../scrollBehavior.js'
 import './Hero.css'
 
 const container = {
@@ -22,7 +23,7 @@ const stats = [
 
 export default function Hero() {
   const { t } = useLang()
-  const go = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  const go = (id) => document.getElementById(id)?.scrollIntoView({ behavior: scrollBehavior() })
 
   return (
     <section className="hero" id="top">

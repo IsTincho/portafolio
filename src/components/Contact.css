@@ -139,7 +139,8 @@
 .cform input:focus,
 .cform select:focus,
 .cform textarea:focus {
-  outline: none;
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
   border-color: var(--accent-line);
   background: var(--bg-card-hover);
 }
