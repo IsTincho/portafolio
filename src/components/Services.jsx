@@ -58,7 +58,7 @@ export default function Services({ standalone = false }) {
               <Reveal i={i} className={`svc ${v.entry ? 'svc--entry' : ''}`} key={v.label}>
                 {v.entry && <span className="svc__badge mono">{t('services.entryBadge')}</span>}
                 <div className="svc__head">
-                  <span className="svc__icon"><Icon size={20} strokeWidth={1.8} /></span>
+                  <span className="svc__icon"><Icon size={20} /></span>
                   <div>
                     <span className="svc__label mono">{v.label}</span>
                     <h3 className="svc__title">{v.title}</h3>
@@ -67,7 +67,7 @@ export default function Services({ standalone = false }) {
                 <p className="svc__desc">{v.desc}</p>
                 <ul className="svc__items">
                   {Array.isArray(v.items) && v.items.map((it, j) => (
-                    <li key={j}><Check size={14} strokeWidth={2.4} /><span>{it}</span></li>
+                    <li key={j}><Check size={16} /><span>{it}</span></li>
                   ))}
                 </ul>
                 <div className="svc__price">
@@ -108,7 +108,7 @@ export default function Services({ standalone = false }) {
         <Reveal i={2} className="services__cta">
           <p className="services__cta-text">{t('services.cta')}</p>
           <button className="btn btn--primary" onClick={() => go('contact')}>
-            {t('services.ctaBtn')} <ArrowUpRight size={17} strokeWidth={2.2} />
+            {t('services.ctaBtn')} <ArrowUpRight size={16} />
           </button>
         </Reveal>
       </div>

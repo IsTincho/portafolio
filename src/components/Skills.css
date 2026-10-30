@@ -38,7 +38,7 @@
   font-size: 0.72rem;
   color: var(--accent);
   border: 1px solid var(--accent-line);
-  border-radius: 5px;
+  border-radius: 6px;
   padding: 0.15rem 0.4rem;
 }
 .skillcard__label {
@@ -58,7 +58,7 @@
   color: var(--text-dim);
   padding: 0.35rem 0.6rem;
   border: 1px solid var(--line);
-  border-radius: 7px;
+  border-radius: 6px;
   transition: color 0.2s, border-color 0.2s;
 }
 .skillcard:hover .skillcard__chips li { border-color: var(--line-strong); }

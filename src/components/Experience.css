@@ -47,7 +47,8 @@
   align-items: baseline;
   gap: 0.5rem;
 }
-.expitem__org { color: var(--accent); font-weight: 500; font-size: 0.92rem; }
+/* letter-spacing: the heading's -0.02em arrives here as fixed px, too tight at this size */
+.expitem__org { color: var(--accent); font-weight: 500; font-size: 0.92rem; letter-spacing: 0; }
 .expitem__place {
   display: block;
   font-size: 0.74rem;

@@ -84,7 +84,7 @@ export default function Nav({ links = [], backHref, backLabel }) {
         <nav className="nav__links" aria-label="Principal">
           {backHref && (
             <a className="nav__link nav__link--back" href={backHref}>
-              <ArrowLeft size={14} strokeWidth={2.2} /> {backLabel}
+              <ArrowLeft size={16} /> {backLabel}
             </a>
           )}
           {links.map((l) => (
@@ -105,11 +105,11 @@ export default function Nav({ links = [], backHref, backLabel }) {
             <span className={lang === 'en' ? 'on' : ''}>EN</span>
           </button>
           <button className="nav__cv" onClick={askCv}>
-            <Download size={15} strokeWidth={2.2} />
+            <Download size={16} />
             <span>{t('nav.cv')}</span>
           </button>
           <button className="nav__burger" onClick={() => setOpen((v) => !v)} aria-label="Menú">
-            {open ? <X size={22} /> : <Menu size={22} />}
+            {open ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
@@ -125,7 +125,7 @@ export default function Nav({ links = [], backHref, backLabel }) {
           >
             {backHref && (
               <a className="nav__drawer-link" href={backHref}>
-                <ArrowLeft size={16} strokeWidth={2.2} /> {backLabel}
+                <ArrowLeft size={16} /> {backLabel}
               </a>
             )}
             {links.map((l, i) => (

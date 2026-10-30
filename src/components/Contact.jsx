@@ -54,7 +54,7 @@ function ContactForm() {
   if (state === 'ok') {
     return (
       <p className="cform__result cform__result--ok">
-        <Check size={17} strokeWidth={2.4} /> {t('contact.formOk')}
+        <Check size={16} /> {t('contact.formOk')}
       </p>
     )
   }
@@ -90,7 +90,7 @@ function ContactForm() {
       <div className="cform__actions">
         <button className="btn btn--primary" type="submit" disabled={state === 'sending'}>
           {state === 'sending' ? t('contact.formSending') : t('contact.formSend')}
-          <Send size={16} strokeWidth={2.2} />
+          <Send size={16} />
         </button>
         <span className="cform__alt mono">
           {t('contact.formOr')} <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
@@ -99,7 +99,7 @@ function ContactForm() {
 
       {state === 'error' && (
         <p className="cform__result cform__result--err">
-          <AlertCircle size={16} strokeWidth={2.2} /> {t('contact.formErr')}
+          <AlertCircle size={16} /> {t('contact.formErr')}
         </p>
       )}
     </form>
@@ -122,9 +122,9 @@ export default function Contact() {
           ) : (
             <>
               <a className="contact__email" href={`mailto:${EMAIL}`}>
-                <Mail size={26} strokeWidth={1.8} />
+                <Mail size={20} />
                 <span>{EMAIL}</span>
-                <ArrowUpRight className="contact__email-arrow" size={24} />
+                <ArrowUpRight className="contact__email-arrow" size={20} />
               </a>
 
               <div className="contact__actions">
@@ -143,10 +143,10 @@ export default function Contact() {
 
           <div className="contact__socials">
             <a href={GITHUB} target="_blank" rel="noopener noreferrer" className="contact__social">
-              <Github size={17} /> GitHub
+              <Github size={16} /> GitHub
             </a>
             <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" className="contact__social">
-              <Linkedin size={17} /> LinkedIn
+              <Linkedin size={16} /> LinkedIn
             </a>
           </div>
 

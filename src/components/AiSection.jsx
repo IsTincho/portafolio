@@ -29,13 +29,13 @@ export default function AiSection() {
             return (
               <Reveal i={i} className="ai__pillar" key={i}>
                 <div className="ai__pillar-head">
-                  <span className="ai__pillar-icon"><Icon size={18} strokeWidth={2} /></span>
+                  <span className="ai__pillar-icon"><Icon size={20} /></span>
                   <span className="ai__pillar-label mono">{p.label}</span>
                 </div>
                 <h3 className="ai__pillar-title">{p.title}</h3>
                 <ul className="ai__points">
                   {Array.isArray(p.points) && p.points.map((pt, j) => (
-                    <li key={j}><Check size={15} strokeWidth={2.4} /><span>{pt}</span></li>
+                    <li key={j}><Check size={16} /><span>{pt}</span></li>
                   ))}
                 </ul>
               </Reveal>

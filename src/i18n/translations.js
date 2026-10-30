@@ -21,11 +21,18 @@ export const strings = {
       role: 'Full Stack · Diseño y arquitectura de sistemas',
       titleA: 'Construyo sistemas',
       titleB: 'que corren en',
-      titleC: 'producción.',
+      titleC: 'producción',
       lede: 'Co-fundador técnico de ZAIGEST. Entiendo el negocio, diseño la arquitectura y dirijo el desarrollo con agentes de IA: SaaS multi-tenant, pasarelas de pago e IA aplicada.',
       ctaProjects: 'Ver proyectos',
       ctaContact: 'Contactar',
       loc: 'Argentina',
+      specRole: 'ROL',
+      specRoleValue: 'Full-Stack · Diseño de sistemas',
+      specBase: 'BASE',
+      specCore: 'STACK',
+      specEdu: 'EDU',
+      specStatus: 'ESTADO',
+      specAvailable: 'disponible',
     },
     stats: {
       production: 'sistemas en producción',
@@ -35,7 +42,7 @@ export const strings = {
     },
     about: {
       kicker: '// perfil',
-      title: 'Perfil orientado a producto.',
+      title: 'Perfil orientado a producto',
       p1: 'Full Stack con foco en diseño y arquitectura de sistemas SaaS, sobre el ecosistema JavaScript moderno —React 18, Node.js, Express, MongoDB—. Técnico Universitario en Programación (UTN FRRO).',
       p2: 'Actualmente co-fundador técnico de ZAIGEST, donde lidero el diseño y desarrollo de punta a punta: arquitectura backend, modelado de datos, frontend e integraciones externas (MercadoPago, AFIP, WhatsApp Cloud API, Cloudinary, Groq LLM).',
       p3: 'Dirijo el desarrollo con agentes de IA (Claude Code) en un flujo de especificación, revisión y prueba: yo decido el diseño y reviso cada cambio antes de que llegue a producción. Opero sistemas reales con clientes reales.',
@@ -46,7 +53,7 @@ export const strings = {
     },
     skills: {
       kicker: '// stack',
-      title: 'Herramientas que uso a diario.',
+      title: 'Herramientas que uso a diario',
       sub: 'El stack con el que diseño, construyo y opero sistemas en producción.',
     },
     ai: {
@@ -54,7 +61,7 @@ export const strings = {
       title: 'Construyo con IA. Y construyo IA.',
       sub: 'Dos lados de lo mismo: integro modelos en producción y desarrollo con flujos agénticos.',
       p1Label: 'IA en producto',
-      p1Title: 'Integro LLMs en producción, con criterio.',
+      p1Title: 'Integro LLMs en producción, con criterio',
       p1: [
         '8 capacidades de IA sobre Groq LLM en ZAIGEST: OCR de documentos, scoring de morosos, generación de contratos, tasación y descripciones.',
         'Cascada de fallback de modelos y retry sobre rate-limit (429) con backoff.',
@@ -62,7 +69,7 @@ export const strings = {
         'Diseño de prompts y dispatcher único que rutea por tipo de tarea.',
       ],
       p2Label: 'Desarrollo aumentado',
-      p2Title: 'Trabajo con agentes y tooling moderno.',
+      p2Title: 'Trabajo con agentes y tooling moderno',
       p2: [
         'Claude Code como entorno de desarrollo agéntico, día a día.',
         'MCP (Model Context Protocol): conecto agentes a MongoDB, Cloudflare, Firebase y más.',
@@ -74,7 +81,7 @@ export const strings = {
     },
     projects: {
       kicker: '// proyectos',
-      title: 'Trabajo seleccionado.',
+      title: 'Trabajo seleccionado',
       sub: 'Cuatro proyectos en producción o listos para producción.',
       role: 'Rol',
       stack: 'Stack',
@@ -88,20 +95,21 @@ export const strings = {
       moreSub: 'Trabajos previos y de formación.',
       caseStudy: 'Ver caso',
       close: 'Cerrar',
+      flagship: 'insignia',
     },
     experience: {
       kicker: '// experiencia',
-      title: 'Trayectoria.',
+      title: 'Trayectoria',
       present: 'Presente',
       eduTitle: 'Formación',
     },
     services: {
       kicker: '// servicios',
-      title: 'Sitios y sistemas a medida.',
+      title: 'Sitios y sistemas a medida',
       sub: 'Desde renovar un sitio que quedó viejo hasta un sistema de gestión completo. Todo lo que ofrezco ya lo tengo corriendo en producción con clientes reales.',
       entryBadge: 'Punto de entrada',
       v0Label: 'Sitios institucionales',
-      v0Title: 'Renuevo tu web vieja.',
+      v0Title: 'Renuevo tu web vieja',
       v0Desc: 'Si tu sitio es de hace diez años, no se ve bien en el celular o ni siquiera lo podés editar, lo rehago de cero.',
       v0Items: [
         'Rediseño completo y responsive de verdad: se ve bien en el celular, que es de donde entra la mayoría de tu gente.',
@@ -115,7 +123,7 @@ export const strings = {
       v0Setup: 'USD 350 – 600',
       v0Monthly: 'USD 15 – 25 / mes',
       v1Label: 'Inmobiliarias',
-      v1Title: 'Gestión inmobiliaria integral.',
+      v1Title: 'Gestión inmobiliaria integral',
       v1Desc: 'Basado en lo aprendido construyendo ZAIGEST, en producción con Pablo Allegri Gestión Inmobiliaria (Rosario).',
       v1Items: [
         'Multi-tenant: cada inmobiliaria con sus datos aislados.',
@@ -128,7 +136,7 @@ export const strings = {
       v1Setup: 'USD 1.000 – 2.100',
       v1Monthly: 'USD 400 / mes',
       v2Label: 'Comercios & retail',
-      v2Title: 'E-commerce y back-office a medida.',
+      v2Title: 'E-commerce y back-office a medida',
       v2Desc: 'Basado en KingsLV: dos tiendas en producción, con pagos reales y back-office propio.',
       v2Items: [
         'Catálogo con variantes (color, modelo) y stock por talle.',
@@ -164,7 +172,7 @@ export const strings = {
     },
     contact: {
       kicker: '// contacto',
-      title: 'Hablemos.',
+      title: 'Hablemos',
       sub: '¿Tenés un proyecto o una posición full-stack? Escribime.',
       emailLabel: 'Email',
       cta: 'Enviar email',
@@ -210,11 +218,18 @@ export const strings = {
       role: 'Full Stack · Systems design & architecture',
       titleA: 'I build systems',
       titleB: 'that run in',
-      titleC: 'production.',
+      titleC: 'production',
       lede: 'Technical co-founder of ZAIGEST. I understand the business, design the architecture and lead development with AI coding agents: multi-tenant SaaS, payment gateways and applied AI.',
       ctaProjects: 'View work',
       ctaContact: 'Get in touch',
       loc: 'Argentina',
+      specRole: 'ROLE',
+      specRoleValue: 'Full-Stack · Systems design',
+      specBase: 'BASE',
+      specCore: 'CORE',
+      specEdu: 'EDU',
+      specStatus: 'STATUS',
+      specAvailable: 'available',
     },
     stats: {
       production: 'systems in production',
@@ -224,7 +239,7 @@ export const strings = {
     },
     about: {
       kicker: '// about',
-      title: 'A product-minded engineer.',
+      title: 'A product-minded engineer',
       p1: 'Full Stack focused on SaaS systems design and architecture, on the modern JavaScript ecosystem —React 18, Node.js, Express, MongoDB—. University Programming Technician (UTN FRRO).',
       p2: 'Currently technical co-founder of ZAIGEST, where I lead end-to-end design and development: backend architecture, data modeling, frontend, and external integrations (MercadoPago, AFIP, WhatsApp Cloud API, Cloudinary, Groq LLM).',
       p3: 'I lead development with AI coding agents (Claude Code) in a spec, review and test loop: I own the design and review every change before it ships. I operate real systems for real clients.',
@@ -235,7 +250,7 @@ export const strings = {
     },
     skills: {
       kicker: '// stack',
-      title: 'Tools I use every day.',
+      title: 'Tools I use every day',
       sub: 'The stack I use to design, build, and operate systems in production.',
     },
     ai: {
@@ -243,7 +258,7 @@ export const strings = {
       title: 'I build with AI. And I build AI.',
       sub: 'Two sides of the same coin: I ship models in production and develop with agentic workflows.',
       p1Label: 'AI in product',
-      p1Title: 'I integrate LLMs in production, with judgment.',
+      p1Title: 'I integrate LLMs in production, with judgment',
       p1: [
         '8 AI capabilities on Groq LLM in ZAIGEST: document OCR, delinquency scoring, contract generation, appraisal and descriptions.',
         'Model fallback cascade and retry on rate-limit (429) with backoff.',
@@ -251,7 +266,7 @@ export const strings = {
         'Prompt design and a single dispatcher that routes by task type.',
       ],
       p2Label: 'AI-augmented dev',
-      p2Title: 'I work with agents and modern tooling.',
+      p2Title: 'I work with agents and modern tooling',
       p2: [
         'Claude Code as my day-to-day agentic development environment.',
         'MCP (Model Context Protocol): I connect agents to MongoDB, Cloudflare, Firebase and more.',
@@ -263,7 +278,7 @@ export const strings = {
     },
     projects: {
       kicker: '// work',
-      title: 'Selected work.',
+      title: 'Selected work',
       sub: 'Four projects in production or production-ready.',
       role: 'Role',
       stack: 'Stack',
@@ -277,20 +292,21 @@ export const strings = {
       moreSub: 'Earlier and academic work.',
       caseStudy: 'View case',
       close: 'Close',
+      flagship: 'flagship',
     },
     experience: {
       kicker: '// experience',
-      title: 'Track record.',
+      title: 'Track record',
       present: 'Present',
       eduTitle: 'Education',
     },
     services: {
       kicker: '// services',
-      title: 'Websites and systems, tailor-made.',
+      title: 'Websites and systems, tailor-made',
       sub: 'From rebuilding a site that has aged badly to a full management system. Everything I offer is already running in production with real clients.',
       entryBadge: 'Entry point',
       v0Label: 'Business websites',
-      v0Title: 'I rebuild your old website.',
+      v0Title: 'I rebuild your old website',
       v0Desc: 'If your site is ten years old, looks broken on a phone, or you cannot even edit it, I rebuild it from scratch.',
       v0Items: [
         'Full redesign, genuinely responsive: it looks right on a phone, where most of your visitors come from.',
@@ -304,7 +320,7 @@ export const strings = {
       v0Setup: 'USD 350 – 600',
       v0Monthly: 'USD 15 – 25 / month',
       v1Label: 'Real estate',
-      v1Title: 'End-to-end agency management.',
+      v1Title: 'End-to-end agency management',
       v1Desc: 'Based on what I learned building ZAIGEST, in production with Pablo Allegri Gestión Inmobiliaria (Rosario).',
       v1Items: [
         'Multi-tenant: each agency with its data isolated.',
@@ -317,7 +333,7 @@ export const strings = {
       v1Setup: 'USD 1,000 – 2,100',
       v1Monthly: 'USD 400 / month',
       v2Label: 'Retail & shops',
-      v2Title: 'E-commerce and admin panel, tailor-made.',
+      v2Title: 'E-commerce and admin panel, tailor-made',
       v2Desc: 'Based on KingsLV: two stores in production, with real payments and a custom back office.',
       v2Items: [
         'Catalog with variants (color, model) and per-size stock.',
@@ -353,7 +369,7 @@ export const strings = {
     },
     contact: {
       kicker: '// contact',
-      title: 'Let’s talk.',
+      title: 'Let’s talk',
       sub: 'Got a project or a full-stack role? Drop me a line.',
       emailLabel: 'Email',
       cta: 'Send email',

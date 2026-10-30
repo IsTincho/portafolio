@@ -21,7 +21,7 @@ export default function About() {
             <Reveal as="p" i={1} className="about__p">{t('about.p2')}</Reveal>
             <Reveal as="p" i={2} className="about__p">{t('about.p3')}</Reveal>
             <Reveal i={3} className="about__beyond">
-              <span className="about__beyond-label mono"><Radio size={13} /> {t('about.beyondLabel')}</span>
+              <span className="about__beyond-label mono"><Radio size={16} /> {t('about.beyondLabel')}</span>
               <p>{t('about.beyond')}</p>
             </Reveal>
           </div>

@@ -14,7 +14,7 @@
 }
 .contact__title {
   font-size: clamp(2.6rem, 8vw, 5rem);
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.035em;
   margin-top: 1.2rem;
 }

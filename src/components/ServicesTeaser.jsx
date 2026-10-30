@@ -17,7 +17,7 @@ export default function ServicesTeaser() {
             <p className="teaser__body">{t('teaser.body')}</p>
           </div>
           <a className="btn btn--primary teaser__cta" href={servicesHref(lang)}>
-            {t('teaser.cta')} <ArrowUpRight size={17} strokeWidth={2.2} />
+            {t('teaser.cta')} <ArrowUpRight size={16} />
           </a>
         </Reveal>
       </div>

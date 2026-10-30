@@ -3,7 +3,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowUpRight, Check, Lock, BookOpen, X } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
 import { projects, moreProjects } from '../data/projects.js'
-import Counter from './Counter.jsx'
 import Reveal from './Reveal.jsx'
 import './Projects.css'
 
@@ -27,8 +26,8 @@ function ProjectPreview({ p }) {
     >
       <span className="pcard__chrome">
         <span className="pcard__chrome-dots"><i /><i /><i /></span>
-        <span className="pcard__chrome-url"><Lock size={11} /> {p.domain}</span>
-        <ArrowUpRight size={15} className="pcard__chrome-go" />
+        <span className="pcard__chrome-url"><Lock size={16} /> {p.domain}</span>
+        <ArrowUpRight size={16} className="pcard__chrome-go" />
       </span>
       <span className="pcard__shot">
         <span className="pcard__shot-ph mono">
@@ -62,7 +61,7 @@ function ProjectCard({ p, onOpenCase }) {
         <span className="pcard__index">{p.index}</span>
         <span className="pcard__rule" />
         <h3 className="pcard__name">{p.name}</h3>
-        {p.flagship && <span className="pcard__flag">flagship</span>}
+        {p.flagship && <span className="pcard__flag">{t('projects.flagship')}</span>}
         <span className="pcard__year mono">{p.year}</span>
       </div>
 
@@ -87,7 +86,7 @@ function ProjectCard({ p, onOpenCase }) {
       <div className="pcard__metrics">
         {p.metrics.map((m) => (
           <div className="pmetric" key={m.label.en}>
-            <span className="pmetric__value"><Counter value={m.value} /></span>
+            <span className="pmetric__value">{m.value}</span>
             <span className="pmetric__label">{m.label[lang]}</span>
           </div>
         ))}
@@ -95,7 +94,7 @@ function ProjectCard({ p, onOpenCase }) {
 
       <ul className="pcard__highlights">
         {p.highlights[lang].map((h, i) => (
-          <li key={i}><Check size={15} className="pcard__check" strokeWidth={2.4} /><span>{h}</span></li>
+          <li key={i}><Check size={16} className="pcard__check" /><span>{h}</span></li>
         ))}
       </ul>
 
@@ -106,12 +105,12 @@ function ProjectCard({ p, onOpenCase }) {
         <div className="pcard__actions">
           {p.caseStudy && (
             <button className="pcard__case" onClick={() => onOpenCase(p)}>
-              <BookOpen size={15} strokeWidth={2.2} /> {t('projects.caseStudy')}
+              <BookOpen size={16} /> {t('projects.caseStudy')}
             </button>
           )}
           {p.url ? (
             <a className="pcard__link" href={p.url} target="_blank" rel="noopener noreferrer">
-              {t('projects.visit')} <ArrowUpRight size={16} strokeWidth={2.2} />
+              {t('projects.visit')} <ArrowUpRight size={16} />
             </a>
           ) : (
             p.domain && <span className="pcard__domain mono">{p.domain}</span>
@@ -160,7 +159,7 @@ function ProjectModal({ project, onClose }) {
             <div className="pmodal__bar">
               <span className="pmodal__index mono">{project.index}</span>
               <h3 className="pmodal__name">{project.name}</h3>
-              {project.flagship && <span className="pcard__flag">flagship</span>}
+              {project.flagship && <span className="pcard__flag">{t('projects.flagship')}</span>}
               <button className="pmodal__close" onClick={onClose} aria-label={t('projects.close')}>
                 <X size={20} />
               </button>
@@ -187,7 +186,7 @@ function ProjectModal({ project, onClose }) {
 
               {project.url && (
                 <a className="btn btn--primary pmodal__visit" href={project.url} target="_blank" rel="noopener noreferrer">
-                  {t('projects.visit')} <ArrowUpRight size={16} strokeWidth={2.2} />
+                  {t('projects.visit')} <ArrowUpRight size={16} />
                 </a>
               )}
             </div>

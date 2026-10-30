@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowDown, ArrowUpRight, MapPin } from 'lucide-react'
 import { useLang } from '../i18n/LanguageContext.jsx'
-import Counter from './Counter.jsx'
 import { scrollBehavior } from '../scrollBehavior.js'
 import './Hero.css'
 
@@ -48,10 +47,10 @@ export default function Hero() {
 
           <motion.div className="hero__cta" variants={item}>
             <button className="btn btn--primary" onClick={() => go('projects')}>
-              {t('hero.ctaProjects')} <ArrowDown size={17} strokeWidth={2.2} />
+              {t('hero.ctaProjects')} <ArrowDown size={16} />
             </button>
             <button className="btn btn--ghost" onClick={() => go('contact')}>
-              {t('hero.ctaContact')} <ArrowUpRight size={17} strokeWidth={2.2} />
+              {t('hero.ctaContact')} <ArrowUpRight size={16} />
             </button>
           </motion.div>
         </motion.div>
@@ -67,11 +66,11 @@ export default function Hero() {
             <span className="spec__path">~/istincho</span>
           </div>
           <dl className="spec__body">
-            <div><dt>ROLE</dt><dd>Full-Stack · Systems design</dd></div>
-            <div><dt>BASE</dt><dd className="spec__loc"><MapPin size={12} /> {t('hero.loc')}</dd></div>
-            <div><dt>CORE</dt><dd>React · Node · Mongo</dd></div>
-            <div><dt>EDU</dt><dd>UTN FRRO</dd></div>
-            <div><dt>STATUS</dt><dd className="spec__ok"><span className="hero__dot" /> available</dd></div>
+            <div><dt>{t('hero.specRole')}</dt><dd>{t('hero.specRoleValue')}</dd></div>
+            <div><dt>{t('hero.specBase')}</dt><dd className="spec__loc"><MapPin size={16} /> {t('hero.loc')}</dd></div>
+            <div><dt>{t('hero.specCore')}</dt><dd>React · Node · Mongo</dd></div>
+            <div><dt>{t('hero.specEdu')}</dt><dd>UTN FRRO</dd></div>
+            <div><dt>{t('hero.specStatus')}</dt><dd className="spec__ok"><span className="hero__dot" /> {t('hero.specAvailable')}</dd></div>
           </dl>
         </motion.aside>
       </div>
@@ -85,7 +84,7 @@ export default function Hero() {
         {stats.map((s, i) => (
           <div className="hstat" key={s.key}>
             <span className="hstat__idx">[{String(i + 1).padStart(2, '0')}]</span>
-            <span className="hstat__value"><Counter value={s.value} /></span>
+            <span className="hstat__value">{s.value}</span>
             <span className="hstat__label">{t(s.key)}</span>
           </div>
         ))}
